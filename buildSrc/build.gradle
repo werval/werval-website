@@ -1,0 +1,16 @@
+apply plugin: 'groovy'
+
+repositories {
+    maven { url 'http://repo.smokejumperit.com' }
+    mavenCentral()
+}
+
+dependencies {
+    compile localGroovy()
+    compile gradleApi()
+    compile 'com.google.guava:guava:17.0'
+    compile 'com.smokejumperit:gradle-plugins:0.8.2'
+    compile 'com.typesafe:config:1.2.1'
+    compile 'org.asciidoctor:asciidoctor-java-integration:0.1.4'
+    compile 'org.sitemesh:sitemesh:3.0-alpha-2'
+}

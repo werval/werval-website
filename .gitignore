@@ -1,0 +1,7 @@
+build
+buildSrc/.nb-gradle/private
+buildSrc/.nb-gradle/profiles/private
+.nb-gradle/private
+.nb-gradle/profiles/private
+.gradle
+.devshell.lock
