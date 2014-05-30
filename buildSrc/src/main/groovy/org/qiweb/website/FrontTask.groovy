@@ -15,9 +15,7 @@
  */
 package org.qiweb.website
 
-import org.asciidoctor.Asciidoctor
 import org.gradle.api.DefaultTask
-import org.gradle.api.GradleException
 import org.gradle.api.tasks.InputDirectory
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
@@ -40,30 +38,11 @@ class FrontTask extends DefaultTask
 		// Asciidoctor
 		def tmpAsciidoced = new File( tmp, 'asciidoced' )
 		tmpAsciidoced.mkdirs()
-        // Workaround for https://github.com/asciidoctor/asciidoctor-gradle-plugin/issues/61
-        System.setProperty('jruby.logger.class','org.jruby.util.log.StandardErrorLogger')
-        Asciidoctor asciidoctor = Asciidoctor.Factory.create()
         project.fileTree( inputDir ).matching( { include "**/*.adoc" } ).visit { e ->
             if( e.file.isFile() ) {
             	def target = new File( tmpAsciidoced, e.relativePath.toString() )
             	target.getParentFile().mkdirs()
-		        asciidoctor.renderFile(
-		            e.file,
-		            [
-		                'in_place': false,
-		                'safe': 0,
-		                'base_dir': inputDir.absolutePath,
-		                'to_dir': target.getParentFile().absolutePath,
-		                'backend': 'html5',
-		                'attributes':[
-		                    'sectlink': '',
-		                    'sectanchors':'',
-		                    'linkattrs': '',
-		                    'linkcss': '',
-		                    'source-highlighter': 'coderay', 'coderay-css': 'class',
-		                ]
-		            ]
-		        )
+                AsciidocHelper.renderFile( e.file, inputDir, target.getParentFile() )
         	}
         }
         project.copy {

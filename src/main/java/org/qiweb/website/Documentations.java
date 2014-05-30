@@ -67,17 +67,17 @@ public class Documentations
 
     public Outcome versionsIndex( String version )
     {
-        return outcomes().seeOther( "/doc/" + version + "/index.html" ).build();
+        return outcomes().seeOther( "/doc/v/" + version + "/index.html" ).build();
     }
 
     public Outcome versionsApi( String version )
     {
-        return outcomes().seeOther( "/doc/" + version + "/api/index.html" ).build();
+        return outcomes().seeOther( "/doc/v/" + version + "/api/index.html" ).build();
     }
 
     public Outcome versionsModules( String version )
     {
-        return outcomes().seeOther( "/doc/" + version + "/modules/index.html" ).build();
+        return outcomes().seeOther( "/doc/v/" + version + "/modules/index.html" ).build();
     }
 
     public Outcome versionsResource( String version, String path )

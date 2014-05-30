@@ -16,9 +16,7 @@
 package org.qiweb.website
 
 import java.nio.CharBuffer;
-import org.asciidoctor.Asciidoctor
 import org.gradle.api.DefaultTask
-import org.gradle.api.GradleException
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import org.gradle.internal.classloader.ClasspathUtil
@@ -140,25 +138,7 @@ Check their activity and codebase before using in production.
         modulesIndexOutput.mkdirs()
         def modulesIndexFile = new File( modulesIndexInput, 'index.adoc' )
         modulesIndexFile.write modulesIndex
-        // Workaround for https://github.com/asciidoctor/asciidoctor-gradle-plugin/issues/61
-        System.setProperty('jruby.logger.class','org.jruby.util.log.StandardErrorLogger')
-        Asciidoctor.Factory.create().renderFile(
-            modulesIndexFile,
-            [
-                'in_place': false,
-                'safe': 0,
-                'base_dir': modulesIndexInput.absolutePath,
-                'to_dir': modulesIndexOutput.absolutePath,
-                'backend': 'html5',
-                'attributes':[
-                    'sectlink': '',
-                    'sectanchors':'',
-                    'linkattrs': '',
-                    'linkcss': '',
-                    'source-highlighter': 'coderay', 'coderay-css': 'class',
-                ]
-            ]
-        )
+        AsciidocHelper.renderFile( modulesIndexFile, modulesIndexInput, modulesIndexOutput )
         project.copy {
             from modulesIndexOutput
             into new File( tmpAggregated, "modules/" )
