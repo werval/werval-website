@@ -6,12 +6,21 @@ Get involved and join the QiWeb community
 :toc: right
 :toc-title: Get involved
 
-== Join the discussion
+== Participate
 
-== Report bugs
+- Join the discussion
+- Report bugs
+- Request features & enhancements
 
-== Contribute to the QiWeb documentation
 
-== Hack on QiWeb
+== Propose patches
+
+- Codebase
+- Build from source
+- Contribution workflow
+- Contribute documentation
+
 
 == Create modules
+
+link:/doc/current/guides.html#_write_qiweb_modules[Writing QiWeb modules] guide

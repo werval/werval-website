@@ -33,11 +33,12 @@ class FrontTask extends DefaultTask
     {
         // Temporary directories
         def tmp = project.file( 'build/tmp/front')
-		tmp.mkdirs()
+		def tmpAsciidoced = new File( tmp, 'asciidoced' )
+		def tmpSitemeshed = new File( tmp, 'sitemeshed' )
+		tmpAsciidoced.mkdirs()
+		tmpSitemeshed.mkdirs()
 
 		// Asciidoctor
-		def tmpAsciidoced = new File( tmp, 'asciidoced' )
-		tmpAsciidoced.mkdirs()
         project.fileTree( inputDir ).matching( { include "**/*.adoc" } ).visit { e ->
             if( e.file.isFile() ) {
             	def target = new File( tmpAsciidoced, e.relativePath.toString() )
@@ -51,13 +52,64 @@ class FrontTask extends DefaultTask
         	exclude '**/*.adoc'
         }
 
-        // TODO SiteMesh to add menu
+        // SiteMesh to add menu
+        def loader = project.classLoaderFor( project.website.doc_develop.name )
 
-        // Finalize
+        // Mangle original decorator
+        def decorator = loader.getResourceAsStream( "org/qiweb/doc/decorator.html" ).text
+        //def parser = new org.cyberneko.html.parsers.SAXParser()
+        def parser = new org.ccil.cowan.tagsoup.Parser()
+        parser.setFeature( "http://xml.org/sax/features/namespaces", false )
+        parser.setFeature( "http://xml.org/sax/features/validation", false )
+        parser.setFeature( "http://xml.org/sax/features/external-general-entities", false )
+        parser.setFeature( "http://xml.org/sax/features/external-parameter-entities", false )
+        parser.setFeature( "http://www.ccil.org/~cowan/tagsoup/features/cdata-elements", false )
+        def gDecorator = new XmlSlurper( parser ).parseText( decorator )
+        // Change jquery script tag src
+        def gDecoratorJQuery = gDecorator.head.script.find { it.@src.toString().contains( 'jquery' ) }
+        gDecoratorJQuery.replaceNode { node ->
+            script( src: '/doc/develop/javascripts/jquery-1.9.1.min.js', type: 'text/javascript' ) {}
+        }
+        // Change menu links
+        def gDecoratorHeader = gDecorator.body.depthFirst().findAll { "qiweb-doc-header".equals( it.@id.toString() ) }
+        gDecoratorHeader.nav[0].ul[0].replaceNode { node ->
+            ul() {
+                li() {
+                    a( href:'/index.html' ) {
+                        img( src: '/doc/develop/images/logo.png', alt: 'logo' )
+                        strong( 'qiweb' )
+                    }
+                }
+                li() { a( 'Overview', href:'/overview.html', 'class': 'qiweb-doc-link' ) }
+                li() { a( 'News', href:'/news.html', 'class': 'qiweb-doc-link' ) }
+                li() { a( 'Downloads', href:'/downloads.html', 'class': 'qiweb-doc-link' ) }
+                li() { a( 'Documentation', href:'/doc/index.html', 'class': 'qiweb-doc-link' ) }
+                li() { a( 'Community', href:'/community.html', 'class': 'qiweb-doc-link' ) }
+                li() { a( 'Security', href:'/security.html', 'class': 'qiweb-doc-link' ) }
+            }
+        }
+        def String modifiedDecorator = new groovy.xml.StreamingMarkupBuilder().bind { mkp.yield gDecorator }
+        // That's some dirty hack for & inside <script/> that gets replaced to html entities
+        modifiedDecorator = "<!doctype html>\n" + modifiedDecorator.replaceAll( '&amp;', '&' )
+        def sm = SiteMeshHelper.createSiteMesh( modifiedDecorator, tmpAsciidoced, tmpSitemeshed  )
+        project.fileTree( tmpAsciidoced ).matching( { include '**/*.html'; exclude 'decorator.html' } ).visit { e ->
+            if( e.file.isFile() ) {
+                sm.process( e.relativePath.toString() )
+            }
+        }
+        project.copy {
+            from tmpAsciidoced
+            into tmpSitemeshed
+            exclude '**/*.html'
+        }
+        
+        // Put the result in build/generated-src and register in into the project
 		project.copy {
-			from tmpAsciidoced
+			from tmpSitemeshed
 			into new File( outputDir, 'org/qiweb/website/front' )
 		}
-		project.delete tmp
+
+        // Cleanup
+		// project.delete tmp
     }
 }

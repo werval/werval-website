@@ -13,4 +13,6 @@ dependencies {
     compile 'com.typesafe:config:1.2.1'
     compile 'org.asciidoctor:asciidoctor-java-integration:0.1.4'
     compile 'org.sitemesh:sitemesh:3.0-alpha-2'
+    compile 'net.sourceforge.nekohtml:nekohtml:1.9.20'
+    compile 'org.ccil.cowan.tagsoup:tagsoup:1.2.1'
 }

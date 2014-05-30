@@ -6,8 +6,20 @@ QiWeb Downloads
 :toc: right
 :toc-title: Versions
 
-IMPORTANT: Find a way to generate this
+We publish both a complete distribution, usable without connectivity, and artifacts to be consumed online by dependency
+managers.
 
-== Current Stable Release
 
-== Previous Releases
+== Current stable release
+
+link:[download]
+
+
+== Nightly builds
+
+link:[download]
+
+
+== Previous releases
+
+IMPORTANT: Find a way to generate this!

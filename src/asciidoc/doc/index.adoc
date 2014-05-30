@@ -4,20 +4,46 @@ QiWeb Documentation
 :description: QiWeb Documentation
 :keywords: qiweb, documentation
 :toc: right
-:toc-title: 
+:toc-title: Documentation
 
-Documentation bla bla ...
+Current release link:/doc/current/index.html[documentation] and link:/doc/current/release-notes.html[release notes].
+
 
 == Getting Started
 
+link:/doc/current/getting-started.html[Getting Started]
+
+
 == Guides
+
+link:/doc/current/guides.html[Guides]
+
 
 == Manual
 
+link:/doc/current/manual.html[QiWeb Manual]
+
+
 == API
+
+link:/doc/current/api/index.html[API Javadoc,window="_blank"]
+
 
 == Modules
 
+link:/doc/current/modules/index.html[Modules]
+
+
 == FAQ
 
-== Previous Releases
+link:/doc/current/faq.html[Frequently Asked Questions]
+
+
+== Development version
+
+See development version link:/doc/develop/index.html[documentation].
+
+
+== Previous releases
+
+IMPORTANT: Find a way to generate this!

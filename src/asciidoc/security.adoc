@@ -12,3 +12,6 @@ Get confident knowning we take security seriously
 [discrete]
 == Report vulnerabilities
 
+== QiWeb X.Y.Z.Label
+
+Links to issues.

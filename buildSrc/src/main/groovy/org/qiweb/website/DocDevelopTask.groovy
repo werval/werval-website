@@ -20,11 +20,6 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import org.gradle.internal.classloader.ClasspathUtil
-import org.sitemesh.builder.SiteMeshOfflineBuilder;
-import org.sitemesh.offline.SiteMeshOffline;
-import org.sitemesh.offline.directory.Directory;
-import org.sitemesh.offline.directory.FileSystemDirectory;
-import org.sitemesh.offline.directory.InMemoryDirectory;
 
 class DocDevelopTask extends DefaultTask
 {
@@ -146,21 +141,12 @@ Check their activity and codebase before using in production.
         project.delete modulesIndexTmp
 
         // SiteMesh the whole thing
-        def Directory source = new FileSystemDirectory( tmpAggregated );
-        def Directory destination = new FileSystemDirectory( tmpSitemeshed )
-        def decorator = loader.getResourceAsStream( "org/qiweb/doc/decorator.html" ).text
-        decorator = decorator.replaceAll( "/@doc", "/doc/develop" )
-        source.save( "decorator.html", CharBuffer.wrap( decorator.toCharArray() ) )
-
-        SiteMeshOffline sitemesh = new SiteMeshOfflineBuilder()
-        .setSourceDirectory( source )
-        .setDestinationDirectory( destination )
-        .addDecoratorPath( "/*", "decorator.html" )
-        .create()
-
-        project.fileTree( tmpAggregated ).matching( { include "**/*.html"; exclude "api/**/*.*" } ).visit { e ->
+        def decoratorText = loader.getResourceAsStream( "org/qiweb/doc/decorator.html" ).text
+        decoratorText = decoratorText.replaceAll( "/@doc", '/doc/develop' )
+        def sm = SiteMeshHelper.createSiteMesh( decoratorText, tmpAggregated, tmpSitemeshed  )
+        project.fileTree( tmpAggregated ).matching( { include '**/*.html'; exclude 'api/**/*.*'; exclude 'decorator.html' } ).visit { e ->
             if( e.file.isFile() ) {
-                sitemesh.process( e.relativePath.toString() )
+                sm.process( e.relativePath.toString() )
             }
         }
         project.copy {
