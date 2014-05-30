@@ -104,6 +104,7 @@ Reusable bits for your Applications
 :description: Reusable bits for your Applications
 :keywords: qiweb, documentation, module, plugin
 :toc: right
+:toc-title: Modules
 
 Modules contains non-core functionnality.
 
