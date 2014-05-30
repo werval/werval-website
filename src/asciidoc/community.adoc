@@ -1,0 +1,17 @@
+= Community
+Get involved and join the QiWeb community
+:title: QiWeb Community
+:description: QiWeb Community
+:keywords: qiweb, community
+:toc: right
+:toc-title: Get involved
+
+== Join the discussion
+
+== Report bugs
+
+== Contribute to the QiWeb documentation
+
+== Hack on QiWeb
+
+== Create modules

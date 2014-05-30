@@ -1,0 +1,9 @@
+= Changelog
+QiWeb Changelog
+:title: QiWeb Changelog
+:description: QiWeb Changelog
+:keywords: qiweb, changes, changelog
+:toc: right
+:toc-title: Versions
+
+IMPORTANT: Find a way to generate this

@@ -47,6 +47,7 @@ website {
 sourceSets.main.resources.srcDirs += file('build/generated-src/develop/resources')
 sourceSets.main.resources.srcDirs += file('build/generated-src/current/resources')
 sourceSets.main.resources.srcDirs += file('build/generated-src/versions/resources')
+sourceSets.main.resources.srcDirs += file('build/generated-src/front/resources')
 
 
 buildscript {
@@ -61,6 +62,9 @@ buildscript {
 }
 
 apply plugin:'qiweb'
+devshell {
+    extraWatch += file( 'src/asciidoc' )
+}
 
 dependencies {
 

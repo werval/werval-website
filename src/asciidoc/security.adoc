@@ -1,0 +1,14 @@
+= Security policy & advisories
+Get confident knowning we take security seriously
+:title: QiWeb Security Policy & Vulnerabilities
+:description: QiWeb Security Policy & Vulnerabilities
+:keywords: qiweb, security, policy, advisories, vulnerabilities
+:toc: right
+:toc-title: Versions
+
+[discrete]
+== Subscribe to security advisories
+
+[discrete]
+== Report vulnerabilities
+

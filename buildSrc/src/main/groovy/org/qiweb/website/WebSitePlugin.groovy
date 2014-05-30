@@ -27,6 +27,13 @@ class WebSitePlugin implements Plugin<Project>
         project.extensions.create( "website", WebSiteExtension )
 
         project.task(
+            "front",
+            type: FrontTask,
+            group:"QiWeb WebSite",
+            description: 'Generates /'
+        )
+
+        project.task(
             "docDevelop",
             type: DocDevelopTask,
             group:"QiWeb WebSite",
@@ -50,7 +57,8 @@ class WebSitePlugin implements Plugin<Project>
         project.tasks.getByName( "processResources" ).dependsOn(
             project.tasks.getByName( "docDevelop" ),
             project.tasks.getByName( "docCurrent" ),
-            project.tasks.getByName( "docVersions" )
+            project.tasks.getByName( "docVersions" ),
+            project.tasks.getByName( "front" )
         )
     }
 }

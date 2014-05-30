@@ -103,6 +103,7 @@ Reusable bits for your Applications
 :title: QiWeb Modules
 :description: Reusable bits for your Applications
 :keywords: qiweb, documentation, module, plugin
+:toc: right
 
 Modules contains non-core functionnality.
 
@@ -149,7 +150,6 @@ Check their activity and codebase before using in production.
                 'to_dir': modulesIndexOutput.absolutePath,
                 'backend': 'html5',
                 'attributes':[
-                    'toc': 'right',
                     'sectlink': '',
                     'sectanchors':'',
                     'linkattrs': '',

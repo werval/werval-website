@@ -1,0 +1,13 @@
+= Downloads
+QiWeb Downloads
+:title: QiWeb Downloads
+:description: QiWeb Downloads
+:keywords: qiweb, downloads
+:toc: right
+:toc-title: Versions
+
+IMPORTANT: Find a way to generate this
+
+== Current Stable Release
+
+== Previous Releases
