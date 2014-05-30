@@ -63,8 +63,12 @@ buildscript {
 apply plugin:'qiweb'
 
 dependencies {
+
     compile 'org.qiweb:org.qiweb.api:0'
+
     runtime 'org.qiweb:org.qiweb.server.bootstrap:0'
     runtime 'ch.qos.logback:logback-classic:1.1.2'
+    
     testCompile 'org.qiweb:org.qiweb.test:0'
+
 }

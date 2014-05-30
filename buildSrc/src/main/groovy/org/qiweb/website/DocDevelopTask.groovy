@@ -99,22 +99,47 @@ class DocDevelopTask extends DefaultTask
         def modulesIndexTmp = new File( tmp, 'modulesIndex' )
         def modulesIndex =
 """= Modules
-Official QiWeb Modules
+Reusable bits for your Applications
+:title: QiWeb Modules
+:description: Reusable bits for your Applications
+:keywords: qiweb, documentation, module, plugin
 
-Modules bla bla bla ...
+Modules contains non-core functionnality.
 
-In alphabetical order:
+Modules are simple JARs and can contain controllers, utility classes and QiWeb Plugins.
+
+== Official Modules
+
+The QiWeb team maintains a collection of documented, tested modules that evolve along the core SDK.
 
 """
         dyndocs.sort( { a,b -> a.name <=> b.name } ).each { dyndoc ->
-            modulesIndex += "- $dyndoc.name\n"
+            modulesIndex += """
+=== $dyndoc.name
+
+    compile 'org.qiweb.modules.$dyndoc.id:0'
+
+link:$dyndoc.id/$dyndoc.entry_point[$dyndoc.name Documentation]
+
+"""
         }
+        modulesIndex += """
+== Community Modules
+
+NOTE: Community Modules are maintained by the community.
+It's the community responsibility to keep them documented, tested and up to date.
+The QiWeb Team makes no guarantee regarding their shape.
+Check their activity and codebase before using in production.
+
+"""
         def modulesIndexInput = new File( modulesIndexTmp, 'input' )
         def modulesIndexOutput = new File( modulesIndexTmp, 'output' )
         modulesIndexInput.mkdirs()
         modulesIndexOutput.mkdirs()
         def modulesIndexFile = new File( modulesIndexInput, 'index.adoc' )
         modulesIndexFile.write modulesIndex
+        // Workaround for https://github.com/asciidoctor/asciidoctor-gradle-plugin/issues/61
+        System.setProperty('jruby.logger.class','org.jruby.util.log.StandardErrorLogger')
         Asciidoctor.Factory.create().renderFile(
             modulesIndexFile,
             [
@@ -125,6 +150,8 @@ In alphabetical order:
                 'backend': 'html5',
                 'attributes':[
                     'toc': 'right',
+                    'sectlink': '',
+                    'sectanchors':'',
                     'linkattrs': '',
                     'linkcss': '',
                     'source-highlighter': 'coderay', 'coderay-css': 'class',
