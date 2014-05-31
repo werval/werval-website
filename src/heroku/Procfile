@@ -1,0 +1,2 @@
+web: QIWEB_WEBSITE_OPTS="-Dconfig.resource=application.conf -Dqiweb.http.address=0.0.0.0 -Dqiweb.http.port=$PORT" ./bin/qiweb-website
+

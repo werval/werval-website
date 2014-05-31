@@ -1,0 +1,7 @@
+// This file exist only to trigger the Gradle buildpack that install Java 8 automatically
+// See system.properties
+task stage {
+	doLast {
+		println ">> QiWeb Website"
+	}
+}

@@ -156,3 +156,16 @@ apply plugin:'application'
 applicationName = name
 mainClassName = 'org.qiweb.server.bootstrap.Main'
 
+
+//
+//  _____             _       
+// |  |  |___ ___ ___| |_ _ _ 
+// |     | -_|  _| . | '_| | |
+// |__|__|___|_| |___|_,_|___|
+//
+
+task herokuDeploy( type: Exec, dependsOn: installApp ) {
+    doFirst { copy { from 'src/heroku'; into 'build/install/qiweb-website' } }
+    commandLine 'heroku', 'push', 'build/install/qiweb-website', '--app', 'qiweb-website'
+}
+
