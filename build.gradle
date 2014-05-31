@@ -135,7 +135,6 @@ devshell {
 dependencies {
 
     compile 'org.qiweb:org.qiweb.api:0'
-    compile 'org.qiweb:org.qiweb.modules.jdbc:0'
 
     runtime 'org.qiweb:org.qiweb.server.bootstrap:0'
     runtime 'ch.qos.logback:logback-classic:1.1.2'
