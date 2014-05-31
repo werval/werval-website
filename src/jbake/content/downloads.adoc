@@ -1,0 +1,44 @@
+= Downloads
+:jbake-type: downloads
+:jbake-status: published
+:jbake-tags: downloads
+:idprefix:
+:toc: right
+:toc-title: Versions
+
+We publish both a complete distribution usable without connectivity and artifacts to be consumed online by dependency
+managers.
+
+TIP: Here you'll find links to the distributions archives only.
+If you are looking to depend on QiWeb in your build, see the link:/doc/current/getting-started.html[Getting Started]
+guide.
+
+toc::[]
+
+== Current stable release
+
+Downloads for current stable QiWeb release can be found below.
+
+[cols="<2,^1",width="50",role="table table-hover"]
+|==============================================================
+|Distribution |link:/download/current/distribution[zip,role="btn btn-xs btn-warning"] link:/download/current/distribution[tar.gz,role="btn btn-xs btn-warning"]
+|Sources |link:/download/current/sources[zip,role="btn btn-xs btn-warning"] link:/download/current/sources[tar.gz,role="btn btn-xs btn-warning"]
+|Documentation |link:/download/current/documentation[zip,role="btn btn-xs btn-warning"] link:/download/current/documentation[tar.gz,role="btn btn-xs btn-warning"]
+|==============================================================
+
+
+
+== Nightly builds
+
+Downloads for QiWeb nightly builds can be found below.
+
+[cols="<2,^1",width="50",role="table table-hover"]
+|==============================================================
+|Distribution |link:/download/develop/distribution[zip,role="btn btn-xs btn-warning"] link:/download/develop/distribution[tar.gz,role="btn btn-xs btn-warning"]
+|Sources |link:/download/develop/sources[zip,role="btn btn-xs btn-warning"] link:/download/develop/sources[tar.gz,role="btn btn-xs btn-warning"]
+|Documentation |link:/download/develop/documentation[zip,role="btn btn-xs btn-warning"] link:/download/develop/documentation[tar.gz,role="btn btn-xs btn-warning"]
+|==============================================================
+
+
+
+== Previous releases

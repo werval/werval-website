@@ -1,9 +1,0 @@
-= News
-QiWeb News
-:title: QiWeb News
-:description: QiWeb News
-:keywords: http, web, java, productivity
-:toc: right
-:toc-title: News
-
-IMPORTANT: Find a way to generate this!

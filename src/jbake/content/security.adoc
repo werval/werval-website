@@ -1,0 +1,23 @@
+= Security
+:jbake-type: page
+:jbake-status: published
+:jbake-tags: security
+:idprefix:
+:toc: right
+:toc-title: Versions
+
+[discrete]
+== Subscribe to security advisories
+
+[discrete]
+== Report vulnerabilities
+
+toc::[]
+
+== QiWeb X.Y.Z.Label
+
+Links to issues.
+
+== QiWeb A.B.C.Label
+
+Links to issues.

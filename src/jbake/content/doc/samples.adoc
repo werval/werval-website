@@ -1,0 +1,21 @@
+= Samples
+:jbake-type: page
+:jbake-status: published
+:jbake-tags: samples
+:idprefix:
+:toc: right
+:toc-title: Samples
+
+Preamble
+
+[discrete]
+== Some title
+
+[discrete]
+== Some other title
+
+toc::[]
+
+== Some sample
+
+== Some other sample

@@ -1,0 +1,22 @@
+= Skeletons
+:jbake-type: page
+:jbake-status: published
+:jbake-tags: skeleton
+:idprefix:
+:toc: right
+:toc-title: Catalog
+
+Preamble
+
+[discrete]
+== Some title
+
+[discrete]
+== Some other title
+
+toc::[]
+
+== Some skelton
+
+== A ghost
+

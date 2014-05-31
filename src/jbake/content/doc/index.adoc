@@ -1,0 +1,33 @@
+= Documentation
+:jbake-type: doc
+:toc: right
+:toc-title: Documentation
+
+Current release link:current/index.html[documentation] and link:current/release-notes.html[release notes].
+
+toc::[]
+
+== Getting started
+
+- link:current/getting-started.html[Getting Started using QiWeb]
+- link:current/guides.html[This and that guides]
+
+== Reference material
+
+- link:current/manual.html[QiWeb Manual]
+- link:current/api/index.html[API Javadoc,window="_blank"]
+- link:current/modules/index.html[Official modules documentation]
+
+== Samples and Skeletons
+
+- link:samples.html[Sample applications]
+- link:skeletons.html[Skeletons]
+
+
+== Development version
+
+See development version link:develop/index.html[documentation].
+
+
+== Previous releases
+

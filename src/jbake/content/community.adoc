@@ -1,0 +1,29 @@
+= Community
+:jbake-type: page
+:jbake-status: published
+:jbake-tags: community
+:idprefix:
+:toc: right
+:toc-title: Get involved
+
+toc::[]
+
+== Participate
+
+- Join the discussion
+- Report bugs
+- Request features & enhancements
+
+
+== Propose patches
+
+- Codebase
+- Build from source
+- Contribution workflow
+- Contribute documentation
+
+
+== Create modules
+
+link:/doc/current/guides.html#_write_qiweb_modules[Writing QiWeb modules] guide
+

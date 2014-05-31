@@ -1,0 +1,16 @@
+
+@media (min-width: 767px) {
+  #wrap > .container {
+  	width: 90%;
+  }
+  #toc.toc2 {
+  	/* background-color: white; */
+  	padding-top: 5em;
+  }
+}
+
+#footer {
+	font-size: 12px;
+	padding-top: 16px;
+	padding-left: 16px;
+}

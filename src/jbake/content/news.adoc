@@ -1,0 +1,8 @@
+= News
+:jbake-type: news
+:jbake-status: published
+:jbake-tags: news
+:idprefix:
+:toc-title: News
+
+News from the QiWeb community
