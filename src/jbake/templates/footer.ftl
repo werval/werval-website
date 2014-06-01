@@ -3,7 +3,7 @@
     </div>
     
     <div id="footer">
-        <p class="muted credit">&copy; 2014 | The QiWeb Community</p>
+        <p class="muted credit">&copy; ${.now?string("yyyy")} | The QiWeb Community</p>
         <p class="muted credit">Mixed with <a href="http://getbootstrap.com/">Bootstrap</a> | Baked with <a href="http://jbake.org">JBake</a></p>
       </div>
     </div>
