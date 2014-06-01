@@ -15,30 +15,12 @@ guide.
 
 toc::[]
 
-== Current stable release
+[[current_stable_release]]
+== Current stable release: {qiweb_current_version}
 
 Downloads for current stable QiWeb release can be found below.
 
-[cols="<2,^1",width="50",role="table table-hover"]
-|==============================================================
-|Distribution |link:/download/current/distribution[zip,role="btn btn-xs btn-warning"] link:/download/current/distribution[tar.gz,role="btn btn-xs btn-warning"]
-|Sources |link:/download/current/sources[zip,role="btn btn-xs btn-warning"] link:/download/current/sources[tar.gz,role="btn btn-xs btn-warning"]
-|Documentation |link:/download/current/documentation[zip,role="btn btn-xs btn-warning"] link:/download/current/documentation[tar.gz,role="btn btn-xs btn-warning"]
-|==============================================================
+- link:https://repo.codeartisans.org/qiweb/org/qiweb/org.qiweb.dist/{qiweb_current_version}/org.qiweb.dist-{qiweb_current_version}-dist.zip[Distribution,role="btn btn-xs btn-warning"]
+- link:https://repo.codeartisans.org/qiweb/org/qiweb/org.qiweb.dist/{qiweb_current_version}/org.qiweb.dist-{qiweb_current_version}-src.zip[Sources,role="btn btn-xs btn-warning"]
+- link:https://repo.codeartisans.org/qiweb/org/qiweb/org.qiweb.dist/{qiweb_current_version}/org.qiweb.dist-{qiweb_current_version}-doc.zip[Documentation,role="btn btn-xs btn-warning"]
 
-
-
-== Nightly builds
-
-Downloads for QiWeb nightly builds can be found below.
-
-[cols="<2,^1",width="50",role="table table-hover"]
-|==============================================================
-|Distribution |link:/download/develop/distribution[zip,role="btn btn-xs btn-warning"] link:/download/develop/distribution[tar.gz,role="btn btn-xs btn-warning"]
-|Sources |link:/download/develop/sources[zip,role="btn btn-xs btn-warning"] link:/download/develop/sources[tar.gz,role="btn btn-xs btn-warning"]
-|Documentation |link:/download/develop/documentation[zip,role="btn btn-xs btn-warning"] link:/download/develop/documentation[tar.gz,role="btn btn-xs btn-warning"]
-|==============================================================
-
-
-
-== Previous releases

@@ -3,7 +3,8 @@
 :toc: right
 :toc-title: Documentation
 
-Current release link:current/index.html[documentation] and link:current/release-notes.html[release notes].
+Current stable release is QiWeb {qiweb_current_version}, see its link:current/index.html[documentation] and
+link:current/release-notes.html[release notes].
 
 toc::[]
 
@@ -18,16 +19,6 @@ toc::[]
 - link:current/api/index.html[API Javadoc,window="_blank"]
 - link:current/modules/index.html[Official modules documentation]
 
-== Samples and Skeletons
-
-- link:samples.html[Sample applications]
-- link:skeletons.html[Skeletons]
-
-
 == Development version
 
 See development version link:develop/index.html[documentation].
-
-
-== Previous releases
-

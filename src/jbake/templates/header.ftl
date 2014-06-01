@@ -10,19 +10,16 @@
     <meta name="generator" content="QiWeb">
 
     <!-- Le styles -->
-    <!--
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/asciidoctor.css" rel="stylesheet">
-    -->
     <!-- See https://github.com/nerk/asciidoctor-bs-themes -->
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/bootstrap_spacelab.css" rel="stylesheet">
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/base.css" rel="stylesheet">
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/qiweb.css" rel="stylesheet">
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/prettify.css" rel="stylesheet">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/css/bootstrap_spacelab.css" rel="stylesheet">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/css/base.css" rel="stylesheet">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/css/org.qiweb.doc.css" rel="stylesheet">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/css/prettify.css" rel="stylesheet">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/org.qiweb.website.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/html5shiv.min.js"></script>
+      <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/html5shiv.min.js"></script>
     <![endif]-->
 
     <!-- Fav and touch icons -->

@@ -11,10 +11,11 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/jquery-1.11.1.min.js"></script>
-    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/bootstrap.min.js"></script>
-    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/prettify.js"></script>
-    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/qiweb.js"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/jquery-1.11.1.min.js"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/bootstrap.min.js"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/prettify.js"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/org.qiweb.doc.js"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/org.qiweb.website.js"></script>
     
   </body>
 </html>
