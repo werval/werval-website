@@ -153,3 +153,7 @@ task deployWebsite( type: Exec, dependsOn: installApp ) {
     commandLine 'heroku', 'push', 'build/install/qiweb-website', '--app', 'qiweb-website'
 }
 
+task deployStaticWebsite( type: Exec, dependsOn: jbake ) {
+    inputs.dir jbake.output
+    commandLine 'rsync', '-Pazhv', '-e', 'ssh', jbake.output.absolutePath + '/', 'paul@codeartisans.org:/home/www/qiweb/www'
+}
