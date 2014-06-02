@@ -5,10 +5,7 @@ apply plugin: 'java'
 
 repositories {
     maven { url qiwebLocalRepository }
-    maven {
-    	url "https://repo.codeartisans.org/qiweb"
-    	credentials { username = "qiweb"; password = "qiweb" }
-	}
+    maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } }
 }
 
 
@@ -58,6 +55,7 @@ task extractDocVersionsNew {
         }
     }
 }
+// JBake
 buildscript {
     repositories {
         jcenter()
