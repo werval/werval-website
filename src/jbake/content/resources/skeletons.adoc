@@ -16,7 +16,7 @@ Preamble
 
 toc::[]
 
-== Some skelton
+== Gradle Skeleton
 
-== A ghost
+== Maven Skeleton
 

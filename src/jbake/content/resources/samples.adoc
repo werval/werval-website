@@ -16,6 +16,7 @@ Preamble
 
 toc::[]
 
-== Some sample
+== URL Shortener
 
-== Some other sample
+== Beer Database
+

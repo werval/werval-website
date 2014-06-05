@@ -11,7 +11,7 @@
 
     <!-- Le styles -->
     <!-- See https://github.com/nerk/asciidoctor-bs-themes -->
-    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/css/bootstrap_spacelab.css" rel="stylesheet">
+    <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/css/bootstrap_lumen.css" rel="stylesheet">
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/css/base.css" rel="stylesheet">
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/css/org.qiweb.doc.css" rel="stylesheet">
     <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/css/prettify.css" rel="stylesheet">

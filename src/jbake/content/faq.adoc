@@ -107,8 +107,11 @@ And voila!
 Sure, QiWeb is build system agnostic.
 Integration with Gradle and Maven are provided, if you happen to use another build system you'll have to write some
 code but it's definitely possible.
-Have a look at the Gradle and Maven plugins code to get started.
 
-If you get to something reusable, please contribute it.
-We are very interested in such a contribution.
+See the link:current/getting-started.html[Getting Started] page.
+
+
+== Is SPDY/HTTP 2.0 supported?
+
+No.
 
