@@ -13,6 +13,6 @@
 
     <logger name="org.qiweb"                    level="info"/>
     <logger name="org.qiweb.runtime"            level="info"/>
-    <logger name="org.qiweb.api.controllers"    level="trace"/>
+    <logger name="org.qiweb.controllers"        level="trace"/>
 
 </configuration>
