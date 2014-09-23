@@ -6,17 +6,189 @@
 :toc: right
 :toc-title: Catalog
 
-Preamble
+Skeletons are simple git repositories that contains project templates for quick bootstrap of applications.
+One doesn't need to install anything to use them except git.
+Counterpart is that you will learn some git trickery along the way.
 
-[discrete]
-== Some title
+CAUTION: By their simple nature, skeletons are not dynamic at all.
+There's no parameters and templating involved.
+If the community shout out and badly needs it we'll reconsider this choice.
 
-[discrete]
-== Some other title
 
 toc::[]
 
-== Gradle Skeleton
 
-== Maven Skeleton
+== Overview
 
+Skeletons can be used in two ways.
+One can copy a skeleton and _forget_ it from a change management point of view.
+Or, one can _fork_ from a skeletons, allowing her to track the skeleton history and merge future changes.
+
+Obviously the steps involved are differents.
+First workflow is a oneliner, second one is a bit more convoluted.
+Choose the one that best suits your needs ; your mileage may vary.
+
+The next sections detail the git commands for theses two workflows.
+
+=== Copy'n forget workflow
+
+TIP: See the `git-archive` and `tar` man pages for detailled explanation of each options used here.
+
+The following command will create a new project from a given skeleton.
+
+----
+git archive --prefix=$PROJECT_NAME/ --format=tar --remote=$SKELETON_URL $SKELETON_BRANCH | tar xf -
+----
+
+Pretty neat, isn't it?
+
+CAUTION: Watchout for the trailing slash (`/`) in the `--prefix` option, don't miss it!
+
+The newly created directory contains the project files not managed by any source code manager.
+If you want to use `git`, change into the directory and issue `git init` as usual.
+
+Here is a sample command line for the `qiweb-skel-gradle` skeleton and a new project's name of `awesome-app`:
+
+----
+git archive --prefix=awesome-app/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle.git master | tar xf -
+----
+
+NOTE: Bellow you'll find the catalog of available skeletons. For each skeleton you'll also find a quick copy'n paste command for this workflow.
+
+
+=== Managed workflow
+
+TIP: See `git-clone`, `git-branch`, `git-remote`, `git-push`, `git-fetch` and `git-merge` man pages for detailled explanation of each options used here.
+Yes, six of them!
+
+.The git command
+----
+git clone --depth=1 --single-branch --branch $SKELETON_BRANCH --origin skeleton $SKELETON_URL $PROJECT_NAME
+----
+
+This creates a git repository in a directory named `MY_PROJECT` from the `master` branch of the `qiweb-skel-gradle` skeleton.
+The new repository `master` branch contains a single commit, the last one from the skeleton history, and a `git` remote named `skeleton` for fetching its future changes.
+
+Now we need to setup a `skeleton` branch that track the original skeleton branch for fetching future changes.
+
+----
+git branch --track skeleton skeleton/master
+----
+
+Next, we'll want to add a remote repository for our new project and push all branches there.
+
+----
+git remote add origin git@yourgitservice.org:your-repository.git
+git branch --track master origin/master
+git push --all
+----
+
+Voila! Your new application is setup in a git repository with a `skeleton` branch tracking the skeleton upstream and a
+`master` branch tracking your remote repository's `master` branch.
+You can now start working in the `master` branch as usual.
+
+TIP: Now is a good time to embrace link:https://github.com/nvie/gitflow[gitflow].
+
+Here is how you get future skeleton changes in the `skeleton` branch and merge them with the branch of your choice:
+
+----
+git fetch skeleton master:skeleton
+git merge heads/skeleton
+----
+
+Of course, you'll have to resolve conflicts as they rise ; that's usual source control work.
+
+NOTE: We mainly use this workflow for internal skeletons. As all this is _simple_ `git` usage, you could do that too.
+
+
+=== Choose a skeleton
+
+Officially supported skeletons aim to cover frequent use cases.
+They are for now limited to the following four types of applications: _HTTP Only_, _JSON Resources_, _WebApp_ and _Single Page Application_.
+All skeletons have a Gradle and a Maven flavour.
+
+[horizontal]
+HTTP Only:: Lightweight application using only QiWeb's core
+JSON Resources:: Lightweight application using the JSON module
+WebApp:: Assets, template engine and JSON resources
+Single Page Application:: Assets, template engine, JSON resources and a client-side javascript application built using GulpJS
+
+None of the skeletons include a persistence mechanism, you'll have to implement yours, see the available link:../doc/current/modules/index.html[modules].
+
+
+== Gradle Skeletons
+
+=== HTTP Only
+
+See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle
+
+.Copy'n paste for copy'n forget workflow
+----
+git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle.git master | tar xf -
+----
+
+=== JSON Resources
+
+See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-json
+
+.Copy'n paste for copy'n forget workflow
+----
+git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-json.git master | tar xf -
+----
+
+=== WebApp
+
+See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-web
+
+.Copy'n paste for copy'n forget workflow
+----
+git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-web.git master | tar xf -
+----
+
+=== Single Page Application
+
+See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-spa
+
+.Copy'n paste for copy'n forget workflow
+----
+git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-spa.git master | tar xf -
+----
+
+
+== Maven Skeletons
+
+=== HTTP Only
+
+See https://scm.codeartisans.org/qiweb/qiweb-skel-maven
+
+.Copy'n paste for copy'n forget workflow
+----
+git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven.git master | tar xf -
+----
+
+=== JSON Resources
+
+See https://scm.codeartisans.org/qiweb/qiweb-skel-maven-json
+
+.Copy'n paste for copy'n forget workflow
+----
+git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-json.git master | tar xf -
+----
+
+=== WebApp
+
+See https://scm.codeartisans.org/qiweb/qiweb-skel-web
+
+.Copy'n paste for copy'n forget workflow
+----
+git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-web.git master | tar xf -
+----
+
+=== Single Page Application
+
+See https://scm.codeartisans.org/qiweb/qiweb-skel-maven-spa
+
+.Copy'n paste for copy'n forget workflow
+----
+git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-spa.git master | tar xf -
+----

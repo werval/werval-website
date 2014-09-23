@@ -9,9 +9,7 @@
 toc::[]
 
 
-== Participate
-
-=== Join the discussion
+== Join the discussion
 
 To discuss with the QiWeb community, post questions and get answers, it is, for now, easiest to do so at the project's
 link:https://scm.codeartisans.org/qiweb/qiweb/issues[issue tracker].
@@ -19,7 +17,7 @@ link:https://scm.codeartisans.org/qiweb/qiweb/issues[issue tracker].
 If you found a bug, want to request a new feature or enhancement or would like to contribute to QiWeb, keep reading.
 
 
-=== Report bugs
+== Report bugs
 
 If you encounter an issue, please report it by creating a https://scm.codeartisans.org/qiweb/qiweb/issues/new[new issue]
 with as much detail as you can get.
@@ -33,7 +31,7 @@ If you happen to have some coding skills but don't want to dive into QiWeb sourc
 bug would be awesome.
 
 
-=== Request features & enhancements
+== Request features & enhancements
 
 Feature or enhancement requests are more than welcome.
 They are as important as bugs as they give the opportunity to discuss what's in, what's missing etc...

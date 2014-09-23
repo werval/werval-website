@@ -10,12 +10,32 @@
 	<div id="preamble">
 		<div class="sectionbody">
 			<div class="paragraph">
-				<p>JVM based toolkit for HTTP applications developpers</p>
+				<p>
+                    QiWeb is an open source JVM based toolkit for building HTTP services.
+                    A lightweight core, live reload dev mode, useful modules, plugins for several build tools and
+                    multiple languages support leave you free to choose the right architecture for your domain.
+                </p>
 			</div>
             <div style="text-align:center">
+                <p>
+                    <div class="btn-group">
+                      <a href="doc/index.html" class="btn btn-lg btn-primary"><i class="glyphicon glyphicon-book"></i> Learn more</a>
+                      <button type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-plane"></i> Get started! <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="doc/current/get-started-gradle.html">Using Gradle</a></li>
+                        <li><a href="doc/current/get-started-maven.html">Using Maven</a></li>
+                        <li class="divider"></li>
+                        <li><a href="doc/current/getting-started.html">What are Gradle and Maven?</a></li>
+                      </ul>
+                    </div>
+                </p>
                 <iframe width="420" height="315" src="//www.youtube.com/embed/rog8ou-ZepE" frameborder="0" allowfullscreen></iframe>
-                <p><strong>We need a screencast!</strong></p>
+                <p><strong>We need some screencast!</strong></p>
             </div>
+
+<#--
 			<div id="toc" class="toc2">
 				<div id="toctitle" class="title">QiWeb</div>
 				<ul class="sectlevel1">
@@ -23,9 +43,11 @@
 					<li><a href="#high_level_overview">High level overview</a></li>
 				</ul>
 			</div>
+-->
 		</div>
 	</div>
 
+<#--
 	<div class="sect1">
 		<h2 id="problems_we_solve"><a class="anchor" href="#problems_we_solve"></a>Problems we solve</h2>
 		<div class="sectionbody">
@@ -43,5 +65,6 @@
 			</div>
 		</div>
 	</div>
+-->
 
 <#include "footer.ftl">
