@@ -110,17 +110,17 @@ buildscript {
         maven { url qiwebLocalRepository }
         maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } }
     }
-    dependencies { classpath 'org.qiweb:org.qiweb.gradle:0' }
+    dependencies { classpath "org.qiweb:org.qiweb.gradle:$current" }
 }
 
 apply plugin:'qiweb'
 devshell.extraWatch += file( 'src/jbake' )
 
 dependencies {
-    compile 'org.qiweb:org.qiweb.api:0'
-    runtime 'org.qiweb:org.qiweb.server.bootstrap:0'
+    compile "org.qiweb:org.qiweb.api:$current"
+    runtime "org.qiweb:org.qiweb.server.bootstrap:$current"
     runtime 'ch.qos.logback:logback-classic:1.1.2'
-    testCompile 'org.qiweb:org.qiweb.test:0'
+    testCompile "org.qiweb:org.qiweb.test:$current"
 }
 
 
