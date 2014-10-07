@@ -53,7 +53,7 @@ git clone git@scm.codeartisans.org:qiweb/qiweb-sample-urlshortener.git
 
 == Beer Database
 
-_Beer Database_ is a full-featured ReSTful endpoint lightened by a single page application built using Angular.
+_Beer Database_ is a full-featured ReSTful endpoint enlightened by a single page application built using Angular.
 
 See https://scm.codeartisans.org/qiweb/qiweb-sample-beerdb
 

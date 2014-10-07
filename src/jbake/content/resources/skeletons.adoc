@@ -11,7 +11,7 @@ One doesn't need to install anything to use them except git.
 Counterpart is that you will learn some git trickery along the way.
 
 CAUTION: By their simple nature, skeletons are not dynamic at all.
-There's no parameters and templating involved.
+There's no parameters nor templating involved.
 If the community shout out and badly needs it we'll reconsider this choice.
 
 
@@ -127,32 +127,32 @@ See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle
 git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle.git master | tar xf -
 ----
 
-=== JSON Resources
-
-See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-json
-
-.Copy'n paste for copy'n forget workflow
-----
-git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-json.git master | tar xf -
-----
-
-=== WebApp
-
-See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-web
-
-.Copy'n paste for copy'n forget workflow
-----
-git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-web.git master | tar xf -
-----
-
-=== Single Page Application
-
-See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-spa
-
-.Copy'n paste for copy'n forget workflow
-----
-git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-spa.git master | tar xf -
-----
+//=== JSON Resources
+//
+//See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-json
+//
+//.Copy'n paste for copy'n forget workflow
+//----
+//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-json.git master | tar xf -
+//----
+//
+//=== WebApp
+//
+//See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-web
+//
+//.Copy'n paste for copy'n forget workflow
+//----
+//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-web.git master | tar xf -
+//----
+//
+//=== Single Page Application
+//
+//See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-spa
+//
+//.Copy'n paste for copy'n forget workflow
+//----
+//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-spa.git master | tar xf -
+//----
 
 
 == Maven Skeletons
@@ -166,29 +166,29 @@ See https://scm.codeartisans.org/qiweb/qiweb-skel-maven
 git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven.git master | tar xf -
 ----
 
-=== JSON Resources
-
-See https://scm.codeartisans.org/qiweb/qiweb-skel-maven-json
-
-.Copy'n paste for copy'n forget workflow
-----
-git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-json.git master | tar xf -
-----
-
-=== WebApp
-
-See https://scm.codeartisans.org/qiweb/qiweb-skel-web
-
-.Copy'n paste for copy'n forget workflow
-----
-git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-web.git master | tar xf -
-----
-
-=== Single Page Application
-
-See https://scm.codeartisans.org/qiweb/qiweb-skel-maven-spa
-
-.Copy'n paste for copy'n forget workflow
-----
-git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-spa.git master | tar xf -
-----
+//=== JSON Resources
+//
+//See https://scm.codeartisans.org/qiweb/qiweb-skel-maven-json
+//
+//.Copy'n paste for copy'n forget workflow
+//----
+//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-json.git master | tar xf -
+//----
+//
+//=== WebApp
+//
+//See https://scm.codeartisans.org/qiweb/qiweb-skel-web
+//
+//.Copy'n paste for copy'n forget workflow
+//----
+//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-web.git master | tar xf -
+//----
+//
+//=== Single Page Application
+//
+//See https://scm.codeartisans.org/qiweb/qiweb-skel-maven-spa
+//
+//.Copy'n paste for copy'n forget workflow
+//----
+//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-spa.git master | tar xf -
+//----
