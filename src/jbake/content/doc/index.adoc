@@ -3,8 +3,8 @@
 :toc: right
 :toc-title: Documentation
 
-Current stable release is QiWeb {qiweb_current_version}, see its link:current/index.html[documentation] and
-link:current/release-notes.html[release notes].
+Current release is QiWeb {qiweb_current_version}, see its link:current/index.html[documentation].
+// and link:current/release-notes.html[release notes].
 
 toc::[]
 

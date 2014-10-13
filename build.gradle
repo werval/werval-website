@@ -8,7 +8,7 @@ repositories {
     maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } }
 }
 
-def versions_array = versions ? new groovy.json.JsonSlurper().parseText(versions) : []
+def versions_array = versions ? new groovy.json.JsonSlurper().parseText(versions) as List<String> : [] as List<String>
 
 
 //
@@ -52,6 +52,20 @@ task extractDocVersionsNew {
         }
     }
 }
+// Versions JSON index
+task generateVersionsIndexJSON {
+    inputs.file configurations.doc_versions_new
+    outputs.file "build/tmp/qiweb-doc/versions.json"
+    doLast {
+        new File("build/tmp/qiweb-doc").mkdirs()
+        def file = new File("build/tmp/qiweb-doc/versions.json")
+        def all_versions = versions_array
+        all_versions.add( 0, current )
+        all_versions.add( 0, "develop" )
+        file.text = new groovy.json.JsonBuilder(all_versions).toString()
+    }
+    // TODO Append javascript code for the version switcher to org.qiweb.doc.js in each version!
+}
 // JBake
 buildscript {
     repositories {
@@ -65,7 +79,7 @@ buildscript {
     }
 }
 task prepareJBakeInput {
-    dependsOn extractDocDevelopNew, extractDocCurrentNew, extractDocVersionsNew
+    dependsOn extractDocDevelopNew, extractDocCurrentNew, extractDocVersionsNew, generateVersionsIndexJSON
     inputs.dir file( 'src/jbake' )
     inputs.dir file( 'build/tmp/qiweb-doc' )
     outputs.dir file( 'build/tmp/jbake' )
@@ -80,7 +94,7 @@ jbake {
     input file( 'build/tmp/jbake' )
     configuration = [
         'qiweb_current_version': current,
-        'qiweb_previous_versions': versions as List
+        'qiweb_previous_versions': versions_array
     ]
 }
 
