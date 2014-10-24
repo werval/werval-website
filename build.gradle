@@ -24,6 +24,31 @@ buildscript {
     }
 }
 
+def versionsSwitcher( title, current, versions_array ) {
+    def versionsSwitcher = """
+    <ul class=\"nav navbar-nav navbar-right\">
+        <li class=\"dropdown\">
+          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">$title<span class=\"caret\"></span></a>
+          <ul class=\"dropdown-menu\" role=\"menu\">
+            <li><a href=\"/doc/current/\">Current Version ($current)</a></li>
+"""
+    versions_array.each { v ->
+        versionsSwitcher += """
+            <li><a href=\"/doc/$v/\">$v</a></li>
+"""
+    }
+    versionsSwitcher += """
+            <li class=\"divider\"></li>
+            <li><a href=\"/doc/develop/\">Development Version</a></li>
+            <li class=\"divider\"></li>
+            <li><a href=\"/\">QiWeb Home</a></li>
+          </ul>
+        </li>            
+    </ul>
+"""
+    return versionsSwitcher
+}
+
 // Develop
 configurations { doc_develop_new { transitive = false } }
 dependencies { doc_develop_new "org.qiweb:org.qiweb.dist:0:doc@zip" }
@@ -32,6 +57,16 @@ task extractDocDevelopNew(type: Copy) {
     from zipTree( configurations.doc_develop_new.fileCollection{ it.name == 'org.qiweb.dist' }.singleFile )
     into file('build/tmp/qiweb-doc/develop')
     includeEmptyDirs = false
+    doLast {
+        def htmlSwitcher = versionsSwitcher( "Development Version", current, versions_array )
+        fileTree('build/tmp/qiweb-doc/develop') { include '**/*.html'; exclude '**/api/**' }.visit { htmlFile ->
+            if( !htmlFile.file.isDirectory() ) {
+                def doc = org.jsoup.Jsoup.parse( htmlFile.file, 'UTF-8' )
+                doc.select( 'div.navbar-collapse' ).first().append( htmlSwitcher )
+                htmlFile.file.text = doc.html()
+            }
+        }
+    }
 }
 // Current
 configurations { doc_current_new { transitive = false } }
@@ -41,6 +76,16 @@ task extractDocCurrentNew(type: Copy) {
     from zipTree( configurations.doc_current_new.fileCollection{ it.name == 'org.qiweb.dist' }.singleFile )
     into file('build/tmp/qiweb-doc/current')
     includeEmptyDirs = false
+    doLast {
+        def htmlSwitcher = versionsSwitcher( "Current Version ($current)", current, versions_array )
+        fileTree('build/tmp/qiweb-doc/current') { include '**/*.html'; exclude '**/api/**' }.visit { htmlFile ->
+            if( !htmlFile.file.isDirectory() ) {
+                def doc = org.jsoup.Jsoup.parse( htmlFile.file, 'UTF-8' )
+                doc.select( 'div.navbar-collapse' ).first().append( htmlSwitcher )
+                htmlFile.file.text = doc.html()
+            }
+        }
+    }
 }
 // Previous releases
 configurations { doc_versions_new { transitive = false } }
@@ -54,6 +99,14 @@ task extractDocVersionsNew {
                 from zipTree( configurations.doc_versions_new.fileCollection{ it.name == 'org.qiweb.dist' && it.version == v }.singleFile )
                 into file( "build/tmp/qiweb-doc/$v" )
                 includeEmptyDirs = false
+            }
+            def htmlSwitcher = versionsSwitcher( v, current, versions_array )
+            fileTree("build/tmp/qiweb-doc/$v") { include '**/*.html'; exclude '**/api/**' }.visit { htmlFile ->
+                if( !htmlFile.file.isDirectory() ) {
+                    def doc = org.jsoup.Jsoup.parse( htmlFile.file, 'UTF-8' )
+                    doc.select( 'div.navbar-collapse' ).first().append( htmlSwitcher )
+                    htmlFile.file.text = doc.html()
+                }
             }
         }
     }
