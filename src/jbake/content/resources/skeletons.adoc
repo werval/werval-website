@@ -37,12 +37,20 @@ TIP: See the `git-archive` and `tar` man pages for detailled explanation of each
 The following command will create a new project from a given skeleton.
 
 ----
-git archive --prefix=$PROJECT_NAME/ --format=tar --remote=$SKELETON_URL $SKELETON_BRANCH | tar xf -
+git archive --prefix=$PROJECT_NAME/ --format=tar --remote=$SKELETON_URL $SKELETON_REF | tar xf -
 ----
 
 Pretty neat, isn't it?
 
 CAUTION: Watchout for the trailing slash (`/`) in the `--prefix` option, don't miss it!
+
+`SKELETON_REF` is the version of the application skeleton you want to use.
+You'll use:
+
+- `master` to get the latest stable version ;
+- `develop` to get the latest development version ;
+- or a version identifier to get a specific version.
+
 
 The newly created directory contains the project files not managed by any source code manager.
 If you want to use `git`, change into the directory and issue `git init` as usual.
