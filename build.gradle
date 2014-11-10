@@ -5,7 +5,7 @@ apply plugin: 'java'
 
 repositories {
     maven { url qiwebLocalRepository }
-    maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } }
+    maven { url "https://repo.codeartisans.org/qiweb" }
 }
 
 def versions_array = versions ? new groovy.json.JsonSlurper().parseText(versions) as List<String> : [] as List<String>
@@ -199,7 +199,7 @@ sourceSets.main.resources.srcDirs += file('build/generated-src/website/resources
 buildscript {
     repositories {
         maven { url qiwebLocalRepository }
-        maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } }
+        maven { url "https://repo.codeartisans.org/qiweb" }
     }
     dependencies { classpath "org.qiweb:org.qiweb.gradle:$current" }
 }
