@@ -92,7 +92,7 @@ configurations { doc_versions_new { transitive = false } }
 dependencies { versions_array.each { v -> doc_versions_new "org.qiweb:org.qiweb.dist:$v:doc@zip" } }
 task extractDocVersionsNew {
     dependsOn configurations.doc_versions_new
-    versions_array.each { v -> outputs.dir dir( "build/tmp/qiweb-doc/$v" ) }
+    versions_array.each { v -> outputs.dir "build/tmp/qiweb-doc/$v" }
     doLast {
         versions_array.each { v ->
             copy {
@@ -204,7 +204,7 @@ buildscript {
     dependencies { classpath "org.qiweb:org.qiweb.gradle:$current" }
 }
 
-apply plugin:'qiweb'
+apply plugin:'org.qiweb.application'
 devshell.extraWatch += file( 'src/jbake' )
 
 dependencies {
