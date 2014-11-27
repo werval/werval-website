@@ -118,7 +118,7 @@ task generateVersionsIndexJSON {
     doLast {
         new File("build/tmp/qiweb-doc").mkdirs()
         def file = new File("build/tmp/qiweb-doc/versions.json")
-        def all_versions = versions_array
+        def all_versions = versions_array.collect()
         all_versions.add( 0, current )
         all_versions.add( 0, "develop" )
         file.text = new groovy.json.JsonBuilder(all_versions).toString()

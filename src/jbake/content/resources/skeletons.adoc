@@ -112,21 +112,20 @@ NOTE: We mainly use this workflow for internal skeletons. As all this is _simple
 === Choose a skeleton
 
 Officially supported skeletons aim to cover frequent use cases.
-They are for now limited to the following four types of applications: _HTTP Only_, _JSON Resources_, _WebApp_ and _Single Page Application_.
+They are for now limited to the following three types of applications: _HTTP Resources_, _WebApp_ and _Single Page Application_.
 All skeletons have a Gradle and a Maven flavour.
 
 [horizontal]
-HTTP Only:: Lightweight application using only QiWeb's core
-JSON Resources:: Lightweight application using the JSON module
-WebApp:: Assets, template engine and JSON resources
-Single Page Application:: Assets, template engine, JSON resources and a client-side javascript application built using GulpJS
+_HTTP Resources:: Lightweight application using only QiWeb's core and the JSON module or course
+WebApp:: JSON resources and a server-side template engine
+Single Page Application:: JSON resources and a client-side javascript application built using http://gulpjs.com/[gulp] & http://browserify.org/[browserify].
 
 None of the skeletons include a persistence mechanism, you'll have to implement yours, see the available link:../doc/current/modules/index.html[modules].
 
 
 == Gradle Skeletons
 
-=== HTTP Only
+=== HTTP Resources
 
 See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle
 
@@ -135,15 +134,6 @@ See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle
 git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle.git master | tar xf -
 ----
 
-//=== JSON Resources
-//
-//See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-json
-//
-//.Copy'n paste for copy'n forget workflow
-//----
-//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-json.git master | tar xf -
-//----
-//
 //=== WebApp
 //
 //See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-web
@@ -152,20 +142,20 @@ git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:
 //----
 //git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-web.git master | tar xf -
 //----
-//
-//=== Single Page Application
-//
-//See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-spa
-//
-//.Copy'n paste for copy'n forget workflow
-//----
-//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-spa.git master | tar xf -
-//----
+
+=== Single Page Application
+
+See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-spa
+
+.Copy'n paste for copy'n forget workflow
+----
+git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-spa.git master | tar xf -
+----
 
 
 == Maven Skeletons
 
-=== HTTP Only
+=== HTTP Resources
 
 See https://scm.codeartisans.org/qiweb/qiweb-skel-maven
 
@@ -174,15 +164,6 @@ See https://scm.codeartisans.org/qiweb/qiweb-skel-maven
 git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven.git master | tar xf -
 ----
 
-//=== JSON Resources
-//
-//See https://scm.codeartisans.org/qiweb/qiweb-skel-maven-json
-//
-//.Copy'n paste for copy'n forget workflow
-//----
-//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-json.git master | tar xf -
-//----
-//
 //=== WebApp
 //
 //See https://scm.codeartisans.org/qiweb/qiweb-skel-web
