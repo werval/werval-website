@@ -19,22 +19,22 @@ All samples applications use the Gradle build system. Here are some tasks common
 
 .Run in developement mode
 ----
-./gradlew devshell
+gradle devshell
 ----
 
 .Run in production mode
 ----
-./gradlew start
+gradle start
 ----
 
 .Run tests
 ----
-./gradlew check
+gradle check
 ----
 
 .Create distribution
 ----
-./gradlew distZip
+gradle distZip
 ----
 
 
