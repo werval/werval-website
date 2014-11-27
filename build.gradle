@@ -30,16 +30,16 @@ def versionsSwitcher( title, current, versions_array ) {
         <li class=\"dropdown\">
           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">$title<span class=\"caret\"></span></a>
           <ul class=\"dropdown-menu\" role=\"menu\">
-            <li><a href=\"/doc/current/\">Current Version ($current)</a></li>
+            <li><a href=\"/doc/current/index.html\">Current Version ($current)</a></li>
 """
     versions_array.each { v ->
         versionsSwitcher += """
-            <li><a href=\"/doc/$v/\">$v</a></li>
+            <li><a href=\"/doc/$v/index.html\">$v</a></li>
 """
     }
     versionsSwitcher += """
             <li class=\"divider\"></li>
-            <li><a href=\"/doc/develop/\">Development Version</a></li>
+            <li><a href=\"/doc/develop/index.html\">Development Version</a></li>
             <li class=\"divider\"></li>
             <li><a href=\"/\">QiWeb Home</a></li>
           </ul>
