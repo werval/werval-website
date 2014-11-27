@@ -91,8 +91,8 @@ task extractDocCurrentNew(type: Copy) {
 configurations { doc_versions_new { transitive = false } }
 dependencies { versions_array.each { v -> doc_versions_new "org.qiweb:org.qiweb.dist:$v:doc@zip" } }
 task extractDocVersionsNew {
-    inputs.file configurations.doc_versions_new
-    versions_array.each { v -> outputs.file "build/tmp/qiweb-doc/$v" }
+    dependsOn configurations.doc_versions_new
+    versions_array.each { v -> outputs.dir dir( "build/tmp/qiweb-doc/$v" ) }
     doLast {
         versions_array.each { v ->
             copy {
