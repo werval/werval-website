@@ -10,7 +10,7 @@ We publish both a complete distribution usable without connectivity and artifact
 managers.
 
 TIP: Here you'll find links to the distributions archives only.
-If you are looking to depend on QiWeb in your build, see the link:/doc/current/getting-started.html[Getting Started]
+If you are looking to depend on QiWeb in your build, see the link:doc/current/getting-started.html[Getting Started]
 guide.
 
 toc::[]

@@ -6,18 +6,28 @@
 :toc: right
 :toc-title: Versions
 
-[discrete]
-== Subscribe to security advisories
+toc::[]
+
+We, the QiWeb community, takes security very seriously.
+We have a culture of defensive coding and build things with security in mind.
+However, it can happen that holes slip through.
+When we fix security vulnerabilities, we do it in the open.
+
+//[discrete]
+//== Subscribe to security advisories
 
 [discrete]
 == Report vulnerabilities
 
-toc::[]
+Until this project reach `1.0` you can create a
+link:https://scm.codeartisans.org/qiweb/qiweb/issues/new[new issue] describing your findings.
 
-== QiWeb X.Y.Z.Label
+After `1.0` we will put vulnerability escrow in place.
 
-Links to issues.
+//== QiWeb X.Y.Z.Label
 
-== QiWeb A.B.C.Label
+//Links to issues.
 
-Links to issues.
+//== QiWeb A.B.C.Label
+
+//Links to issues.
