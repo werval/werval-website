@@ -1,0 +1,25 @@
+= QiWeb 0.4 is out!
+QiWeb 0.4
+2014-11-28
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: announcement
+:idprefix:
+
+After almost two years of development driven by usage in various applications put to production, we are pleased to
+announce the immediate availability of QiWeb 0.4.
+
+QiWeb is an open source JVM based toolkit for building HTTP services.
+A lightweight core, live reload dev mode, useful modules, plugins for several build tools and
+multiple languages support leave you free to choose the right architecture for your domain.
+
+After stabilizing the core, this version was baked with usability and ease of adoption in mind.
+
+link:../doc/current/get-started-gradle.html[Get started using Gradle]
+
+link:../doc/current/get-started-maven.html[Get started using maven]
+
+Keep in sight that this is an early access release and that some edges may still be rough.
+
+If you encounter any issue, please report by creating a
+link:https://scm.codeartisans.org/qiweb/qiweb/issues/new[new issue].
