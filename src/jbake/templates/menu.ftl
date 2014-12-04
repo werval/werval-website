@@ -12,7 +12,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <#-- <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>news.html">News</a></li> -->
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>news.html">News</a></li>
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/index.html">Documentation</a></li>
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>resources/skeletons.html">Skeletons</a></li>
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>resources/samples.html">Samples</a></li>

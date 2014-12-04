@@ -35,15 +35,16 @@
                 <p><strong>We need some screencast!</strong></p>
             </div>
 
-<#--
 			<div id="toc" class="toc2">
-				<div id="toctitle" class="title">QiWeb</div>
+				<div id="toctitle" class="title">News</div>
 				<ul class="sectlevel1">
-					<li><a href="#problems_we_solve">Problems we solve</a></li>
-					<li><a href="#high_level_overview">High level overview</a></li>
+                    <#list posts as post>
+                        <#if (post.status == "published")>
+                            <li><a href="${post.uri}"><#escape x as x?xml>${post.title}</#escape></a></li>
+                        </#if>
+                    </#list>
 				</ul>
 			</div>
--->
 		</div>
 	</div>
 

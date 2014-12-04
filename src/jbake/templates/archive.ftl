@@ -6,7 +6,7 @@
 		<h1>News Archive</h1>
 	</div>
 	
-	<!--<ul>-->
+	<ul>
 		<#list published_posts as post>
 		<#if (last_month)??>
 			<#if post.date?string("MMMM yyyy") != last_month>
