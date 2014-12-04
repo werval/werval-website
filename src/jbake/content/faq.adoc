@@ -115,3 +115,7 @@ See the link:current/getting-started.html[Getting Started] page.
 
 Not yet.
 
+
+== Are WebSockets supported?
+
+Not yet.
