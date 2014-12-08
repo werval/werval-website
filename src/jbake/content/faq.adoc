@@ -111,11 +111,19 @@ code but it's definitely possible.
 See the link:current/getting-started.html[Getting Started] page.
 
 
-== Is SPDY/HTTP 2.0 supported?
+== What are the main sources of inspiration of QiWeb?
 
-Not yet.
+- https://www.playframework.com/[Play Framework]
+- http://qi4j.org/[Qi4j]
+- A lot of other http/web frameworks (Rails, Django, Grails etc...)
 
 
 == Are WebSockets supported?
 
+Not yet, see https://scm.codeartisans.org/qiweb/qiweb/issues/30[#30]
+
+
+== Is SPDY/HTTP 2.0 supported?
+
 Not yet.
+

@@ -11,8 +11,7 @@ toc::[]
 
 == Join the discussion
 
-To discuss with the QiWeb community, post questions and get answers, it is, for now, easiest to do so at the project's
-link:https://scm.codeartisans.org/qiweb/qiweb/issues[issue tracker].
+To discuss with the QiWeb community, post questions and get answers, join us at http://freenode.net/[freenode], IRC channel `##qiweb`.
 
 If you found a bug, want to request a new feature or enhancement or would like to contribute to QiWeb, keep reading.
 
