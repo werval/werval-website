@@ -11,14 +11,14 @@ toc::[]
 
 == Join the discussion
 
-To discuss with the QiWeb community, post questions and get answers, join us at http://freenode.net/[freenode], IRC channel `##qiweb`.
+To discuss with the Werval community, post questions and get answers, join us at http://freenode.net/[freenode], IRC channel `##werval`.
 
-If you found a bug, want to request a new feature or enhancement or would like to contribute to QiWeb, keep reading.
+If you found a bug, want to request a new feature or enhancement or would like to contribute to Werval, keep reading.
 
 
 == Report bugs
 
-If you encounter an issue, please report it by creating a https://scm.codeartisans.org/qiweb/qiweb/issues/new[new issue]
+If you encounter an issue, please report it by creating a https://github.com/werval/werval/issues/new[new issue]
 with as much detail as you can get.
 
 Before doing so, please search for existing issues and make sure your bug hasn't been reported yet.
@@ -26,7 +26,7 @@ Before doing so, please search for existing issues and make sure your bug hasn't
 Remember that you can paste programs output, error traces etc.. into the issue and attach log files, screenshots to it.
 Anything that could allow us to reproduce the bug in order to fix it is welcome!
 
-If you happen to have some coding skills but don't want to dive into QiWeb source code, a test-case that reproduce the
+If you happen to have some coding skills but don't want to dive into Werval source code, a test-case that reproduce the
 bug would be awesome.
 
 
@@ -35,20 +35,20 @@ bug would be awesome.
 Feature or enhancement requests are more than welcome.
 They are as important as bugs as they give the opportunity to discuss what's in, what's missing etc...
 
-Simply report them by creating a https://scm.codeartisans.org/qiweb/qiweb/issues/new[new issue] describing the feature
+Simply report them by creating a https://github.com/werval/werval/issues/new[new issue] describing the feature
 or enhancement you have in mind.
 
 
 == Propose patches
 
-QiWeb is written using the Java language (but not limited to it, see the F.A.Q).
+Werval is written using the Java language (but not limited to it, see the F.A.Q).
 The source code is managed using `git`.
-You'll need to use theses two technologies for contributing new code to QiWeb.
+You'll need to use theses two technologies for contributing new code to Werval.
 
-Of course, the first step is to link:doc/current/guides.html#build_qiweb_from_sources[Build QiWeb from sources].
+Of course, the first step is to link:doc/current/guides.html#build_werval_from_sources[Build Werval from sources].
 
 Once you're confident the build is working on your computer, you'll want a convy IDE supporting Java 8.
-QiWeb is built using Gradle that is supported by many IDEs, see the http://www.gradle.org/tooling[Gradle Tooling] page
+Werval is built using Gradle that is supported by many IDEs, see the http://www.gradle.org/tooling[Gradle Tooling] page
 at `gradle.org`.
 
 We recommand link:https://netbeans.org/[Netbeans] but link:https://www.jetbrains.com/idea/[IntelliJ IDEA] or
@@ -74,7 +74,7 @@ It looks more complicated than it is. Here are the guidelines;
 - The following names are reserved for not feature branches; `master`, `develop`, `hotfix/*`, `release/*`
 
 Day-to-day development revolves around the `develop` branch and it is this branch that you typically clone from our
-repository if you intend to contribute to QiWeb itself.
+repository if you intend to contribute to Werval itself.
 If you create a new feature, or make some larger piece of refactoring, then please create a 'feature branch'
 (see article for details).
 
@@ -104,21 +104,21 @@ Choose the workflow you're confy with.
 
 If you want to contribute to the documentation effort, well that's really good news!
 
-The QiWeb documentation lies alongside the source code.
+The Werval documentation lies alongside the source code.
 It is written using the `AsciiDoc` format and processed using `AsciiDoctor`,
 here is the http://asciidoctor.org/docs/user-manual/[User Manual].
 All you need is a text editor.
 
 NOTE: Documentation contribution workflow is the very same as for code contributions, see above.
 
-The QiWeb build system generates a HTML version of the documentation.
-You should start by building QiWeb from the source, see above.
+The Werval build system generates a HTML version of the documentation.
+You should start by building Werval from the source, see above.
 
 Once that the build pass on your computer,
-see the link:/doc/current/guides.html#qiweb_documentation[QiWeb Documentation] guide.
+see the link:/doc/current/guides.html#werval_documentation[Werval Documentation] guide.
 
 
 == Create modules
 
-See the link:/doc/current/guides.html#write_modules[Writing QiWeb Modules] guide.
+See the link:/doc/current/guides.html#write_modules[Writing Werval Modules] guide.
 

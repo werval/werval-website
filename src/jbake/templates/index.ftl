@@ -3,7 +3,7 @@
 	<#include "menu.ftl">
 
 	<div class="page-header">
-		<h1>QiWeb</h1>
+		<h1><img src="images/logo.png" style="width: 80px; height: 80px;"/> Werval</h1>
         <div class="muted">Zen and Energy for Web Development</div>
 	</div>
 
@@ -11,7 +11,7 @@
 		<div class="sectionbody">
 			<div class="paragraph">
 				<p>
-                    QiWeb is an open source JVM based toolkit for building HTTP services.
+                    Werval is an open source JVM based toolkit for building HTTP services.
                     A lightweight core, live reload dev mode, useful modules, plugins for several build tools and
                     multiple languages support leave you free to choose the right architecture for your domain.
                 </p>

@@ -5,4 +5,4 @@
 :idprefix:
 :toc-title: News
 
-News from the QiWeb community
+News from the Werval community

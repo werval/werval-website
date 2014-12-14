@@ -1,4 +1,4 @@
-# QiWeb WebSite running on QiWeb
+# Werval WebSite running on Werval
 
 Robots disallowed on `/doc`, allowed on `/doc/current` only
 

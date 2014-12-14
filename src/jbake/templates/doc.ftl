@@ -8,14 +8,14 @@
 
 	<p>${content.body}</p>
 
-    <#if config.qiweb_previous_versions?has_content>
+    <#if config.werval_previous_versions?has_content>
         <div class="sect1">
             <h2 id="previous_releases"><a class="anchor" href="#previous_releases"></a>Previous releases</h2>
             <div class="sectionbody">
-                <#list config.qiweb_previous_versions as version>
+                <#list config.werval_previous_versions as version>
                     <div class="sect2">
                         <h3 id="${version}">${version}</h3>
-                        <div class="paragraph"><p>Documentation for QiWeb ${version} can be found <a href="${version}/index.html">here</a>.</p></div>
+                        <div class="paragraph"><p>Documentation for Werval ${version} can be found <a href="${version}/index.html">here</a>.</p></div>
                         <div class="paragraph"><p>Don't forget to read the <a href="${version}/release-notes.html">release notes</a>.</p></div>
                         <div class="ulist">
                             <ul>

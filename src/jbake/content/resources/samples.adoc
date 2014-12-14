@@ -6,7 +6,7 @@
 :toc: right
 :toc-title: Samples
 
-Sample applications leveraging the QiWeb toolset, documented, ready to run, deploy and hack!
+Sample applications leveraging the Werval toolset, documented, ready to run, deploy and hack!
 
 NOTE: If you happend to build a sample application and are kin to link:../community.html[contribute] it, we'll be more than happy!
 
@@ -40,13 +40,13 @@ gradle distZip
 
 == URL Shortener
 
-_URL Shortener_ is a simple application using only QiWeb core.
+_URL Shortener_ is a simple application using only Werval core.
 
-See https://scm.codeartisans.org/qiweb/qiweb-sample-urlshortener
+See https://github.com/werval/werval-sample-urlshortener
 
 .Clone the project
 ----
-git clone git@scm.codeartisans.org:qiweb/qiweb-sample-urlshortener.git
+git clone git@github.com:werval/werval-sample-urlshortener.git
 ----
 
 
@@ -55,10 +55,10 @@ git clone git@scm.codeartisans.org:qiweb/qiweb-sample-urlshortener.git
 
 _Beer Database_ is a full-featured ReSTful endpoint enlightened by a single page application built using Angular.
 
-See https://scm.codeartisans.org/qiweb/qiweb-sample-beerdb
+See https://github.com/werval/werval-sample-beerdb
 
 .Clone the project
 ----
-git clone git@scm.codeartisans.org:qiweb/qiweb-sample-beerdb.git
+git clone git@github.com:werval/werval-sample-beerdb.git
 ----
 

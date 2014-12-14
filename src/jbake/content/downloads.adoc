@@ -10,17 +10,17 @@ We publish both a complete distribution usable without connectivity and artifact
 managers.
 
 TIP: Here you'll find links to the distributions archives only.
-If you are looking to depend on QiWeb in your build, see the link:doc/current/getting-started.html[Getting Started]
+If you are looking to depend on Werval in your build, see the link:doc/current/getting-started.html[Getting Started]
 guide.
 
 toc::[]
 
 [[current_stable_release]]
-== Current stable release: {qiweb_current_version}
+== Current stable release: {werval_current_version}
 
-Downloads for current stable QiWeb release can be found below.
+Downloads for current stable Werval release can be found below.
 
-- link:https://repo.codeartisans.org/qiweb/org/qiweb/org.qiweb.dist/{qiweb_current_version}/org.qiweb.dist-{qiweb_current_version}-dist.zip[Distribution,role="btn btn-xs btn-warning"]
-- link:https://repo.codeartisans.org/qiweb/org/qiweb/org.qiweb.dist/{qiweb_current_version}/org.qiweb.dist-{qiweb_current_version}-src.zip[Sources,role="btn btn-xs btn-warning"]
-- link:https://repo.codeartisans.org/qiweb/org/qiweb/org.qiweb.dist/{qiweb_current_version}/org.qiweb.dist-{qiweb_current_version}-doc.zip[Documentation,role="btn btn-xs btn-warning"]
+- link:https://repo.codeartisans.org/werval/io/werval/io.werval.dist/{werval_current_version}/io.werval.dist-{werval_current_version}-dist.zip[Distribution,role="btn btn-xs btn-warning"]
+- link:https://repo.codeartisans.org/werval/io.werval/io.werval.dist/{werval_current_version}/io.werval.dist-{werval_current_version}-src.zip[Sources,role="btn btn-xs btn-warning"]
+- link:https://repo.codeartisans.org/werval/io.werval/io.werval.dist/{werval_current_version}/io.werval.dist-{werval_current_version}-doc.zip[Documentation,role="btn btn-xs btn-warning"]
 

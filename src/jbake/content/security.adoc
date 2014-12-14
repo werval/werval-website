@@ -8,7 +8,7 @@
 
 toc::[]
 
-We, the QiWeb community, takes security very seriously.
+We, the Werval community, takes security very seriously.
 We have a culture of defensive coding and build things with security in mind.
 However, it can happen that holes slip through.
 When we fix security vulnerabilities, we do it in the open.
@@ -20,14 +20,14 @@ When we fix security vulnerabilities, we do it in the open.
 == Report vulnerabilities
 
 Until this project reach `1.0` you can create a
-link:https://scm.codeartisans.org/qiweb/qiweb/issues/new[new issue] describing your findings.
+link:https://github.com/werval/werval/issues/new[new issue] describing your findings.
 
 After `1.0` we will put vulnerability escrow in place.
 
-//== QiWeb X.Y.Z.Label
+//== Werval X.Y.Z.Label
 
 //Links to issues.
 
-//== QiWeb A.B.C.Label
+//== Werval A.B.C.Label
 
 //Links to issues.

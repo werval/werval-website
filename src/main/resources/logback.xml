@@ -11,8 +11,8 @@
         <appender-ref ref="stdout" />
     </root>
 
-    <logger name="org.qiweb"                    level="info"/>
-    <logger name="org.qiweb.runtime"            level="info"/>
-    <logger name="org.qiweb.controllers"        level="trace"/>
+    <logger name="io.werval"                    level="info"/>
+    <logger name="io.werval.runtime"            level="info"/>
+    <logger name="io.werval.controllers"        level="trace"/>
 
 </configuration>

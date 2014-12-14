@@ -1,11 +1,11 @@
 
-description = "QiWeb Website"
+description = "Werval Website"
 
 apply plugin: 'java'
 
 repositories {
-    if( hasProperty( 'qiwebLocalRepository' ) ) maven { url qiwebLocalRepository }
-    maven { url "https://repo.codeartisans.org/qiweb" }
+    maven { url wervalLocalRepository }
+    maven { url "https://repo.codeartisans.org/werval" }
     jcenter()
 }
 
@@ -42,7 +42,7 @@ def versionsSwitcher( title, current, versions_array ) {
             <li class=\"divider\"></li>
             <li><a href=\"/doc/develop/index.html\">Development Version</a></li>
             <li class=\"divider\"></li>
-            <li><a href=\"/\">QiWeb Home</a></li>
+            <li><a href=\"/\">Werval Home</a></li>
           </ul>
         </li>            
     </ul>
@@ -52,15 +52,15 @@ def versionsSwitcher( title, current, versions_array ) {
 
 // Develop
 configurations { doc_develop_new { transitive = false } }
-dependencies { doc_develop_new "org.qiweb:org.qiweb.dist:0:doc@zip" }
+dependencies { doc_develop_new "io.werval:io.werval.dist:0:doc@zip" }
 task extractDocDevelopNew(type: Copy) {
     inputs.file configurations.doc_develop_new
-    from zipTree( configurations.doc_develop_new.fileCollection{ it.name == 'org.qiweb.dist' }.singleFile )
-    into file('build/tmp/qiweb-doc/develop')
+    from zipTree( configurations.doc_develop_new.fileCollection{ it.name == 'io.werval.dist' }.singleFile )
+    into file('build/tmp/werval-doc/develop')
     includeEmptyDirs = false
     doLast {
         def htmlSwitcher = versionsSwitcher( "Development Version", current, versions_array )
-        fileTree('build/tmp/qiweb-doc/develop') { include '**/*.html'; exclude '**/api/**' }.visit { htmlFile ->
+        fileTree('build/tmp/werval-doc/develop') { include '**/*.html'; exclude '**/api/**' }.visit { htmlFile ->
             if( !htmlFile.file.isDirectory() ) {
                 def doc = org.jsoup.Jsoup.parse( htmlFile.file, 'UTF-8' )
                 doc.select( 'div.navbar-collapse' ).first().append( htmlSwitcher )
@@ -71,15 +71,15 @@ task extractDocDevelopNew(type: Copy) {
 }
 // Current
 configurations { doc_current_new { transitive = false } }
-dependencies { doc_current_new "org.qiweb:org.qiweb.dist:$current:doc@zip" }
+dependencies { doc_current_new "io.werval:io.werval.dist:$current:doc@zip" }
 task extractDocCurrentNew(type: Copy) {
     inputs.file configurations.doc_current_new
-    from zipTree( configurations.doc_current_new.fileCollection{ it.name == 'org.qiweb.dist' }.singleFile )
-    into file('build/tmp/qiweb-doc/current')
+    from zipTree( configurations.doc_current_new.fileCollection{ it.name == 'io.werval.dist' }.singleFile )
+    into file('build/tmp/werval-doc/current')
     includeEmptyDirs = false
     doLast {
         def htmlSwitcher = versionsSwitcher( "Current Version ($current)", current, versions_array )
-        fileTree('build/tmp/qiweb-doc/current') { include '**/*.html'; exclude '**/api/**' }.visit { htmlFile ->
+        fileTree('build/tmp/werval-doc/current') { include '**/*.html'; exclude '**/api/**' }.visit { htmlFile ->
             if( !htmlFile.file.isDirectory() ) {
                 def doc = org.jsoup.Jsoup.parse( htmlFile.file, 'UTF-8' )
                 doc.select( 'div.navbar-collapse' ).first().append( htmlSwitcher )
@@ -90,19 +90,19 @@ task extractDocCurrentNew(type: Copy) {
 }
 // Previous releases
 configurations { doc_versions_new { transitive = false } }
-dependencies { versions_array.each { v -> doc_versions_new "org.qiweb:org.qiweb.dist:$v:doc@zip" } }
+dependencies { versions_array.each { v -> doc_versions_new "io.werval:io.werval.dist:$v:doc@zip" } }
 task extractDocVersionsNew {
     dependsOn configurations.doc_versions_new
-    versions_array.each { v -> outputs.dir "build/tmp/qiweb-doc/$v" }
+    versions_array.each { v -> outputs.dir "build/tmp/werval-doc/$v" }
     doLast {
         versions_array.each { v ->
             copy {
-                from zipTree( configurations.doc_versions_new.fileCollection{ it.name == 'org.qiweb.dist' && it.version == v }.singleFile )
-                into file( "build/tmp/qiweb-doc/$v" )
+                from zipTree( configurations.doc_versions_new.fileCollection{ it.name == 'io.werval.dist' && it.version == v }.singleFile )
+                into file( "build/tmp/werval-doc/$v" )
                 includeEmptyDirs = false
             }
             def htmlSwitcher = versionsSwitcher( v, current, versions_array )
-            fileTree("build/tmp/qiweb-doc/$v") { include '**/*.html'; exclude '**/api/**' }.visit { htmlFile ->
+            fileTree("build/tmp/werval-doc/$v") { include '**/*.html'; exclude '**/api/**' }.visit { htmlFile ->
                 if( !htmlFile.file.isDirectory() ) {
                     def doc = org.jsoup.Jsoup.parse( htmlFile.file, 'UTF-8' )
                     doc.select( 'div.navbar-collapse' ).first().append( htmlSwitcher )
@@ -115,16 +115,16 @@ task extractDocVersionsNew {
 // Versions JSON index
 task generateVersionsIndexJSON {
     inputs.file configurations.doc_versions_new
-    outputs.file "build/tmp/qiweb-doc/versions.json"
+    outputs.file "build/tmp/werval-doc/versions.json"
     doLast {
-        new File("build/tmp/qiweb-doc").mkdirs()
-        def file = new File("build/tmp/qiweb-doc/versions.json")
+        new File("build/tmp/werval-doc").mkdirs()
+        def file = new File("build/tmp/werval-doc/versions.json")
         def all_versions = versions_array.collect()
         all_versions.add( 0, current )
         all_versions.add( 0, "develop" )
         file.text = new groovy.json.JsonBuilder(all_versions).toString()
     }
-    // TODO Append javascript code for the version switcher to org.qiweb.doc.js in each version!
+    // TODO Append javascript code for the version switcher to io.werval.doc.js in each version!
 }
 // JBake
 buildscript {
@@ -141,11 +141,11 @@ buildscript {
 task prepareJBakeInput {
     dependsOn extractDocDevelopNew, extractDocCurrentNew, extractDocVersionsNew, generateVersionsIndexJSON
     inputs.dir file( 'src/jbake' )
-    inputs.dir file( 'build/tmp/qiweb-doc' )
+    inputs.dir file( 'build/tmp/werval-doc' )
     outputs.dir file( 'build/tmp/jbake' )
     doLast {
         copy { from file( 'src/jbake' ); into file( 'build/tmp/jbake' ) }
-        copy { from file( 'build/tmp/qiweb-doc' ); into file( 'build/tmp/jbake/assets/doc' ) }
+        copy { from file( 'build/tmp/werval-doc' ); into file( 'build/tmp/jbake/assets/doc' ) }
     }
 }
 apply plugin: 'jbake'
@@ -153,8 +153,8 @@ jbake {
     dependsOn prepareJBakeInput
     input file( 'build/tmp/jbake' )
     configuration = [
-        'qiweb_current_version': current,
-        'qiweb_previous_versions': versions_array
+        'werval_current_version': current,
+        'werval_previous_versions': versions_array
     ]
     doLast {
         // Add Google Analytics async script to all HTML pages
@@ -199,21 +199,21 @@ sourceSets.main.resources.srcDirs += file('build/generated-src/website/resources
 
 buildscript {
     repositories {
-        if( hasProperty( 'qiwebLocalRepository' ) ) maven { url qiwebLocalRepository }
-        maven { url "https://repo.codeartisans.org/qiweb" }
+        maven { url wervalLocalRepository }
+        maven { url "https://repo.codeartisans.org/werval" }
         jcenter()
     }
-    dependencies { classpath "org.qiweb:org.qiweb.gradle:$current" }
+    dependencies { classpath "io.werval:io.werval.gradle:$current" }
 }
 
-apply plugin:'org.qiweb.application'
+apply plugin:'io.werval.application'
 devshell.extraWatch += file( 'src/jbake' )
 
 dependencies {
-    compile "org.qiweb:org.qiweb.api:$current"
-    runtime "org.qiweb:org.qiweb.server.bootstrap:$current"
+    compile "io.werval:io.werval.api:$current"
+    runtime "io.werval:io.werval.server.bootstrap:$current"
     runtime 'ch.qos.logback:logback-classic:1.1.2'
-    testCompile "org.qiweb:org.qiweb.test:$current"
+    testCompile "io.werval:io.werval.test:$current"
 }
 
 
@@ -227,7 +227,7 @@ dependencies {
 
 apply plugin:'application'
 applicationName = name
-mainClassName = 'org.qiweb.server.bootstrap.Main'
+mainClassName = 'io.werval.server.bootstrap.Main'
 
 
 //
@@ -238,13 +238,28 @@ mainClassName = 'org.qiweb.server.bootstrap.Main'
 //           |_|       |___|
 //
 
+buildscript {
+    dependencies { classpath "org.ajoberstar:gradle-git:0.13.0-milestone.1" }
+}
+
 task deployWebsite( type: Exec, dependsOn: installApp ) {
     // Using Heroku
-    doFirst { copy { from 'src/heroku'; into 'build/install/qiweb-website' } }
-    commandLine 'heroku', 'push', 'build/install/qiweb-website', '--app', 'qiweb-website'
+    doFirst { copy { from 'src/heroku'; into 'build/install/werval-website' } }
+    commandLine 'heroku', 'push', 'build/install/werval-website', '--app', 'werval-website'
 }
 
 task deployStaticWebsite( type: Exec, dependsOn: jbake ) {
     inputs.dir jbake.output
     commandLine 'rsync', '-Pazhv', '-e', 'ssh', jbake.output.absolutePath + '/', 'paul@codeartisans.org:/home/www/qiweb/www'
+}
+
+apply plugin: 'org.ajoberstar.github-pages'
+// Task is publishGhPages
+githubPages {
+    commitMessage = "Update werval.io"
+    repoUri = 'git@github.com:werval/werval.github.io.git'
+    targetBranch = "master"
+    pages {
+        from jbake.outputs.files
+    }
 }

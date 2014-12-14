@@ -6,18 +6,18 @@
 
 toc::[]
 
-== QiWeb {qiweb_current_version}
+== Werval {werval_current_version}
 
 - link:current/index.html[Documentation index]
 
 === Getting started
 
-- link:current/getting-started.html[Getting Started using QiWeb]
+- link:current/getting-started.html[Getting Started using Werval]
 - link:current/guides.html[This and that guides]
 
 === Reference material
 
-- link:current/manual.html[QiWeb Manual]
+- link:current/manual.html[Werval Manual]
 - link:current/api/index.html[API Javadoc,window="_blank"]
 - link:current/modules/index.html[Official modules documentation]
 

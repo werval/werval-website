@@ -55,10 +55,10 @@ You'll use:
 The newly created directory contains the project files not managed by any source code manager.
 If you want to use `git`, change into the directory and issue `git init` as usual.
 
-Here is a sample command line for the `qiweb-skel-gradle` skeleton and a new project's name of `awesome-app`:
+Here is a sample command line for the `werval-skel-gradle` skeleton and a new project's name of `awesome-app`:
 
 ----
-git archive --prefix=awesome-app/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle.git master | tar xf -
+git archive --prefix=awesome-app/ --format=tar --remote=git@github.com:werval/werval-skel-gradle.git master | tar xf -
 ----
 
 NOTE: Bellow you'll find the catalog of available skeletons. For each skeleton you'll also find a quick copy'n paste command for this workflow.
@@ -74,7 +74,7 @@ Yes, six of them!
 git clone --depth=1 --single-branch --branch $SKELETON_BRANCH --origin skeleton $SKELETON_URL $PROJECT_NAME
 ----
 
-This creates a git repository in a directory named `MY_PROJECT` from the `master` branch of the `qiweb-skel-gradle` skeleton.
+This creates a git repository in a directory named `MY_PROJECT` from the `master` branch of the `werval-skel-gradle` skeleton.
 The new repository `master` branch contains a single commit, the last one from the skeleton history, and a `git` remote named `skeleton` for fetching its future changes.
 
 Now we need to setup a `skeleton` branch that track the original skeleton branch for fetching future changes.
@@ -116,7 +116,7 @@ They are for now limited to the following three types of applications: _HTTP Res
 All skeletons have a Gradle and a Maven flavour.
 
 [horizontal]
-_HTTP Resources:: Lightweight application using only QiWeb's core and the JSON module or course
+_HTTP Resources:: Lightweight application using only Werval's core and the JSON module or course
 WebApp:: JSON resources and a server-side template engine
 Single Page Application:: JSON resources and a client-side javascript application built using http://gulpjs.com/[gulp] & http://browserify.org/[browserify].
 
@@ -127,29 +127,29 @@ None of the skeletons include a persistence mechanism, you'll have to implement 
 
 === HTTP Resources
 
-See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle
+See https://github.com/werval/werval-skel-gradle
 
 .Copy'n paste for copy'n forget workflow
 ----
-git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle.git master | tar xf -
+git archive --prefix=my-project/ --format=tar --remote=git@github.com:werval/werval-skel-gradle.git master | tar xf -
 ----
 
 //=== WebApp
 //
-//See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-web
+//See https://github.com/werval/werval-skel-gradle-web
 //
 //.Copy'n paste for copy'n forget workflow
 //----
-//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-web.git master | tar xf -
+//git archive --prefix=my-project/ --format=tar --remote=git@github.com:werval/werval-skel-gradle-web.git master | tar xf -
 //----
 
 === Single Page Application
 
-See https://scm.codeartisans.org/qiweb/qiweb-skel-gradle-spa
+See https://github.com/werval/werval-skel-gradle-spa
 
 .Copy'n paste for copy'n forget workflow
 ----
-git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-gradle-spa.git master | tar xf -
+git archive --prefix=my-project/ --format=tar --remote=git@github.com:werval/werval-skel-gradle-spa.git master | tar xf -
 ----
 
 
@@ -157,27 +157,27 @@ git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:
 
 === HTTP Resources
 
-See https://scm.codeartisans.org/qiweb/qiweb-skel-maven
+See https://github.com/werval/werval-skel-maven
 
 .Copy'n paste for copy'n forget workflow
 ----
-git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven.git master | tar xf -
+git archive --prefix=my-project/ --format=tar --remote=git@github.com:werval/werval-skel-maven.git master | tar xf -
 ----
 
 //=== WebApp
 //
-//See https://scm.codeartisans.org/qiweb/qiweb-skel-web
+//See https://github.com/werval/werval-skel-web
 //
 //.Copy'n paste for copy'n forget workflow
 //----
-//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-web.git master | tar xf -
+//git archive --prefix=my-project/ --format=tar --remote=git@github.com:werval/werval-skel-maven-web.git master | tar xf -
 //----
 //
 //=== Single Page Application
 //
-//See https://scm.codeartisans.org/qiweb/qiweb-skel-maven-spa
+//See https://github.com/werval/werval-skel-maven-spa
 //
 //.Copy'n paste for copy'n forget workflow
 //----
-//git archive --prefix=my-project/ --format=tar --remote=git@scm.codeartisans.org:qiweb/qiweb-skel-maven-spa.git master | tar xf -
+//git archive --prefix=my-project/ --format=tar --remote=git@github.com:werval/werval-skel-maven-spa.git master | tar xf -
 //----

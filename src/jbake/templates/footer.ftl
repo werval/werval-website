@@ -3,7 +3,7 @@
     </div>
     
     <div id="footer">
-        <p class="muted credit">&copy; ${.now?string("yyyy")} | The QiWeb Community</p>
+        <p class="muted credit">&copy; ${.now?string("yyyy")} | The Werval Community</p>
         <p class="muted credit">Mixed with <a href="http://getbootstrap.com/">Bootstrap</a> | Baked with <a href="http://jbake.org">JBake</a></p>
       </div>
     </div>
@@ -14,8 +14,8 @@
     <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/jquery-1.11.1.min.js"></script>
     <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/bootstrap.min.js"></script>
     <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/prettify.js"></script>
-    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/org.qiweb.doc.js"></script>
-    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/org.qiweb.website.js"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>doc/develop/js/io.werval.doc.js"></script>
+    <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/io.werval.website.js"></script>
     
   </body>
 </html>

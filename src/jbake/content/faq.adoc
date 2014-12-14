@@ -1,25 +1,25 @@
 = Frequenty Asked Questions
 This and that
 :jbake-type: page
-:title: Frequenty Asked Questions about QiWeb
-:description: Frequenty Asked Questions about QiWeb
-:keywords: qiweb, documentation, faq, questions
+:title: Frequenty Asked Questions about Werval
+:description: Frequenty Asked Questions about Werval
+:keywords: werval, documentation, faq, questions
 :toc: right
 :toc-title: Questions
 
-New FAQs should be submitted as a new https://scm.codeartisans.org/qiweb/qiweb/issues/new[GitLab Issue],
+New FAQs should be submitted as a new https://github.com/werval/werval/issues/new[GitLab Issue],
 once accepted it will be appended to the bottom of this document.
 
 toc::[]
 
-== How is "QiWeb" pronounced?
+== How is "Werval" pronounced?
 
-QiWeb is pronouced "chee web".
+Werval is pronouced "werval".
 
 
 == What the heck is this name?
 
-QiWeb is the name of QiWeb.
+Werval is the name of Werval.
 
 Read it many times.
 
@@ -62,24 +62,24 @@ Ah, I see your Global object is already in Groovy, cool.
 Development mode should work in most situations provided your build system is set up correctly.
 
 
-== Is it possible to embedd the QiWeb Runtime?
+== Is it possible to embedd the Werval Runtime?
 
 The framework provide a default `main` class/method for you to reuse but you can also write yours if you need it.
-This way of running a QiWeb Application can be seen as embedding QiWeb.
+This way of running a Werval Application can be seen as embedding Werval.
 
-// See the XXX section of the QiWeb manual to get some know-how.
+// See the XXX section of the Werval manual to get some know-how.
 
 
 == I found a bug! What to do?
 
-Simply create a https://scm.codeartisans.org/qiweb/qiweb/issues/new[new issue].
+Simply create a https://github.com/werval/werval/issues/new[new issue].
 Please provide accurate and useful information when doing so.
 
 If you don't know how to properly report a bug, read
 http://www.chiark.greenend.org.uk/~sgtatham/bugs.html[How to Report Bugs Effectively] by Simon Tatham first.
 
 
-== Can I use QiWeb in my commercial applications under a closed-source, proprietary license?
+== Can I use Werval in my commercial applications under a closed-source, proprietary license?
 
 Yes.
 The https://www.apache.org/licenses/LICENSE-2.0.html[Apache License] is very business-friendly.
@@ -88,7 +88,7 @@ Please observe the obligations on your part, especially regarding notices, trade
 
 == What to do when I can see no logs and get a weird message from SLF4J?
 
-QiWeb use the http://www.slf4j.org[SLF4J] API (Simple Logging Facade for Java) but you have to choose what SLF4J
+Werval use the http://www.slf4j.org[SLF4J] API (Simple Logging Facade for Java) but you have to choose what SLF4J
 implementation to use.
 We strongly recommend http://logback.qos.ch/[Logback].
 
@@ -102,16 +102,16 @@ From there you simply add Logback (or any SLF4J implementation) to your dependen
 And voila!
 
 
-== Can I build QiWeb Application using {put.your.build.system.here}?
+== Can I build Werval Application using {put.your.build.system.here}?
 
-Sure, QiWeb is build system agnostic.
+Sure, Werval is build system agnostic.
 Integration with Gradle and Maven are provided, if you happen to use another build system you'll have to write some
 code but it's definitely possible.
 
 See the link:current/getting-started.html[Getting Started] page.
 
 
-== What are the main sources of inspiration of QiWeb?
+== What are the main sources of inspiration of Werval?
 
 - https://www.playframework.com/[Play Framework]
 - http://qi4j.org/[Qi4j]
@@ -120,7 +120,7 @@ See the link:current/getting-started.html[Getting Started] page.
 
 == Are WebSockets supported?
 
-Not yet, see https://scm.codeartisans.org/qiweb/qiweb/issues/30[#30]
+Not yet, see https://github.com/werval/werval/issues/30[#30]
 
 
 == Is SPDY/HTTP 2.0 supported?

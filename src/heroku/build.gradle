@@ -2,6 +2,6 @@
 // See system.properties
 task stage {
 	doLast {
-		println ">> QiWeb Website"
+		println ">> Werval Website"
 	}
 }
