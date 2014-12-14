@@ -261,5 +261,7 @@ githubPages {
     targetBranch = "master"
     pages {
         from jbake.outputs.files
+        from 'src/ghpages'
     }
 }
+publishGhPages.dependsOn jbake

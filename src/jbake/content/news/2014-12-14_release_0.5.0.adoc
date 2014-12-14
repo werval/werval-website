@@ -1,19 +1,19 @@
-= Werval 0.4.0 is out!
-Werval 0.4.0
-2014-11-28
+= Werval 0.5.0 is out!
+Werval 0.5.0
+2014-12-14
 :jbake-type: post
 :jbake-status: published
 :jbake-tags: announcement
 :idprefix:
 
-After almost two years of development driven by usage in various applications put to production, we are pleased to
-announce the immediate availability of Werval `0.4.0`.
+Following the link:2014-11-28_release_0.4.0.html[0.4.0] release, here is `0.5.0`.
+This release is the first under the new project name `werval`.
+
+One feature was added along the way: a link:../doc/current/modules/sanitize/index.html[Sanitize] module that provide utilities for input/output sanitization and encoding thanks to several OWASP projects.
 
 Werval is an open source JVM based toolkit for building HTTP services.
 A lightweight core, live reload dev mode, useful modules, plugins for several build tools and
 multiple languages support leave you free to choose the right architecture for your domain.
-
-After stabilizing the core, this version was baked with usability and ease of adoption in mind.
 
 link:../doc/current/get-started-gradle.html[Get started using Gradle]
 
