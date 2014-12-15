@@ -18,9 +18,7 @@
                         <div class="paragraph"><p>Downloads for Werval ${version} can be found below.</p></div>
                         <div class="ulist">
                             <ul>
-                                <li><p><a href="https://repo.codeartisans.org/werval/io/werval/io.werval.dist/${version}/io.werval.dist-${version}-dist.zip" class="btn btn-xs btn-warning">Distribution</a></p></li>
-                                <li><p><a href="https://repo.codeartisans.org/werval/io/werval/io.werval.dist/${version}/io.werval.dist-${version}-src.zip" class="btn btn-xs btn-warning">Sources</a></p></li>
-                                <li><p><a href="https://repo.codeartisans.org/werval/io/werval/io.werval.dist/${version}/io.werval.dist-${version}-doc.zip" class="btn btn-xs btn-warning">Documentation</a></p></li>
+                                <li><p><a href="https://jcenter.bintray.com/io/werval/io.werval.dist/${version}/io.werval.dist-${version}-distribution.zip" class="btn btn-xs btn-warning">Distribution</a></p></li>
                             </ul>
                         </div>
                     </div>
