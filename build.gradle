@@ -5,7 +5,6 @@ apply plugin: 'java'
 
 repositories {
     maven { url wervalLocalRepository }
-    maven { url "https://repo.codeartisans.org/werval" }
     jcenter()
 }
 
