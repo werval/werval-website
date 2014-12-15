@@ -199,7 +199,6 @@ sourceSets.main.resources.srcDirs += file('build/generated-src/website/resources
 buildscript {
     repositories {
         maven { url wervalLocalRepository }
-        maven { url "https://repo.codeartisans.org/werval" }
         jcenter()
     }
     dependencies { classpath "io.werval:io.werval.gradle:$current" }
