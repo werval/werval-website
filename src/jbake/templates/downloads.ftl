@@ -15,11 +15,8 @@
                 <#list config.werval_previous_versions as version>
                     <div class="sect2">
                         <h3 id="${version}">${version}</h3>
-                        <div class="paragraph"><p>Downloads for Werval ${version} can be found below.</p></div>
-                        <div class="ulist">
-                            <ul>
-                                <li><p><a href="https://jcenter.bintray.com/io/werval/io.werval.dist/${version}/io.werval.dist-${version}-distribution.zip" class="btn btn-xs btn-warning">Distribution</a></p></li>
-                            </ul>
+                        <div class="paragraph">
+                            <p><a href="https://jcenter.bintray.com/io/werval/io.werval.dist/${version}/io.werval.dist-${version}-distribution.zip" class="btn btn-sm btn-warning">io.werval.dist-${version}-distribution.zip</a></p>
                         </div>
                     </div>
                 </#list>

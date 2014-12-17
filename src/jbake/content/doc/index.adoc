@@ -9,8 +9,8 @@ toc::[]
 
 == Werval {werval_current_version}
 
-- link:current/index.html[Documentation for the latest released version]
+link:current/index.html[Documentation for the latest released version,role="btn btn-sm btn-success"]
 
 == Development version
 
-link:develop/index.html[Documentation for the development version]
+link:develop/index.html[Documentation for the development version,role="btn btn-sm btn-info"]

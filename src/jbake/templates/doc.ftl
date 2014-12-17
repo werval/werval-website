@@ -15,8 +15,9 @@
                 <#list config.werval_previous_versions as version>
                     <div class="sect2">
                         <h3 id="${version}">${version}</h3>
-                        <div class="paragraph"><p>Documentation for Werval ${version} can be found <a href="${version}/index.html">here</a>.</p></div>
-                        <div class="paragraph"><p>Don't forget to read the <a href="${version}/release-notes.html">release notes</a>.</p></div>
+                        <div class="paragraph">
+                            <p><a href="${version/index.html}" class="btn btn-sm btn-warning">Documentation for ${version}</a></p>
+                        </div>
                     </div>
                 </#list>
             </div>

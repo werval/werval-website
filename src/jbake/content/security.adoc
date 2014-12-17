@@ -6,12 +6,12 @@
 :toc: right
 :toc-title: Versions
 
-toc::[]
-
 We, the Werval community, takes security very seriously.
 We have a culture of defensive coding and build things with security in mind.
 However, it can happen that holes slip through.
 When we fix security vulnerabilities, we do it in the open.
+
+// toc::[]
 
 //[discrete]
 //== Subscribe to security advisories

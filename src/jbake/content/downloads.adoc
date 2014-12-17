@@ -6,18 +6,13 @@
 :toc: right
 :toc-title: Versions
 
-We publish both a complete distribution usable without connectivity and artifacts to be consumed online by dependency
-managers.
-
-TIP: Here you'll find links to the distributions archives only.
-If you are looking to depend on Werval in your build, see the link:doc/current/getting-started.html[Getting Started]
-guide.
+Werval artifacts are published to link:https://bintray.com/bintray/jcenter[JCenter] for consumption by build systems
+like link:doc/current/get-started-gradle.html[Gradle] or link:doc/current/get-started-maven.html[Maven].
+This page contains links to distributions archives intended for offline usage.
 
 toc::[]
 
 [[current_stable_release]]
 == Current stable release: {werval_current_version}
 
-Downloads for current stable Werval release can be found below.
-
-link:https://jcenter.bintray.com/io/werval/io.werval.dist/{werval_current_version}/io.werval.dist-{werval_current_version}-distribution.zip[Distribution,role="btn btn-xs btn-warning"]
+link:https://jcenter.bintray.com/io/werval/io.werval.dist/{werval_current_version}/io.werval.dist-{werval_current_version}-distribution.zip[io.werval.dist-{werval_current_version}-distribution.zip,role="btn btn-sm btn-warning"]
