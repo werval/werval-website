@@ -8,22 +8,21 @@ This and that
 :toc-title: Questions
 
 New FAQs should be submitted as a new https://github.com/werval/werval/issues/new[GitLab Issue],
-once accepted it will be appended to the bottom of this document.
+once accepted it will be added to this document.
 
 toc::[]
 
 == How is "Werval" pronounced?
 
-Werval is pronouced "werval".
+Werval is pronouced `/ˈwɛər vəl/`, or `[wair-vuh l, weer-, wur-]`.
 
 
 == What the heck is this name?
 
-Werval is the name of Werval.
+Werval is a contraction of link:https://en.wikipedia.org/wiki/Werewolf[Werewolf] and
+link:https://en.wikipedia.org/wiki/Serval[Serval].
 
-Read it many times.
-
-...
+image::images/faq-name.jpg[Werewolf and Serval,align="center"]
 
 What was the question already?
 
