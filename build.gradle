@@ -113,17 +113,33 @@ task extractDocVersionsNew {
 }
 // Versions JSON index
 task generateVersionsIndexJSON {
-    inputs.file configurations.doc_versions_new
+    inputs.file "gradle.properties"
     outputs.file "build/tmp/werval-doc/versions.json"
     doLast {
-        new File("build/tmp/werval-doc").mkdirs()
-        def file = new File("build/tmp/werval-doc/versions.json")
         def all_versions = versions_array.collect()
         all_versions.add( 0, current )
         all_versions.add( 0, "develop" )
+        new File("build/tmp/werval-doc").mkdirs()
+        def file = new File("build/tmp/werval-doc/versions.json")
         file.text = new groovy.json.JsonBuilder(all_versions).toString()
     }
+    // TODO Unused for now
     // TODO Append javascript code for the version switcher to io.werval.doc.js in each version!
+}
+// robots.txt disallowing previous versions
+task generateRobotsTxt {
+    inputs.file "gradle.properties"
+    outputs.file "build/tmp/robots-txt/robots.txt"
+    doLast {
+        def robots = "Sitemap: http://werval.io/sitemap.xml\n"
+        robots += "User-agent: *\n"
+        robots += "Disallow: /doc/develop\n"
+        versions_array.each { v ->
+            robots += "Disallow: /doc/$v\n"
+        }
+        new File("build/tmp/robots-txt").mkdirs()
+        new File("build/tmp/robots-txt/robots.txt").text = robots
+    }
 }
 // JBake
 buildscript {
@@ -135,12 +151,14 @@ buildscript {
     }
 }
 task prepareJBakeInput {
-    dependsOn extractDocDevelopNew, extractDocCurrentNew, extractDocVersionsNew, generateVersionsIndexJSON
+    dependsOn extractDocDevelopNew, extractDocCurrentNew, extractDocVersionsNew, generateVersionsIndexJSON, generateRobotsTxt
     inputs.dir file( 'src/jbake' )
+    inputs.dir file( 'build/tmp/robots-txt' )
     inputs.dir file( 'build/tmp/werval-doc' )
     outputs.dir file( 'build/tmp/jbake' )
     doLast {
         copy { from file( 'src/jbake' ); into file( 'build/tmp/jbake' ) }
+        copy { from file( 'build/tmp/robots-txt' ); into file( 'build/tmp/jbake/assets' ) }
         copy { from file( 'build/tmp/werval-doc' ); into file( 'build/tmp/jbake/assets/doc' ) }
     }
 }
