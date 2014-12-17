@@ -45,7 +45,7 @@ Werval is written using the Java language (but not limited to it, see the F.A.Q)
 The source code is managed using `git`.
 You'll need to use theses two technologies for contributing new code to Werval.
 
-Of course, the first step is to link:doc/current/guides.html#build_werval_from_sources[Build Werval from sources].
+Of course, the first step is to link:doc/current/guides.html#build_werval_from_sources[build werval from sources].
 
 Once you're confident the build is working on your computer, you'll want a convy IDE supporting Java 8.
 Werval is built using Gradle that is supported by many IDEs, see the http://www.gradle.org/tooling[Gradle Tooling] page
@@ -58,47 +58,16 @@ If you are adventurous, any text editor can be used.
 
 === Contribution workflow
 
-We generally uses a Commit-Then-Review policy on most changes.
-This allows a reasonable high velocity of development.
+We accept contributions as Github Pull Requests.
 
-Courtesy of Vincent Driessen, we borrowed the http://nvie.com/posts/a-successful-git-branching-model/[git-flow]
-branching model.
-
-image::images/git-flow-model.png[Git Flow,align="center"]
-
-It looks more complicated than it is. Here are the guidelines;
-
-- Never commit to the `master` branch while developing!!
-- The `develop` branch is the equivalent of trunk in subversion.
-- Any changes that are not trivial, start a feature branch.
-- The following names are reserved for not feature branches; `master`, `develop`, `hotfix/*`, `release/*`
-
-Day-to-day development revolves around the `develop` branch and it is this branch that you typically clone from our
-repository if you intend to contribute to Werval itself.
-If you create a new feature, or make some larger piece of refactoring, then please create a 'feature branch'
-(see article for details).
-
-The `release/*` and `hotfix/*` branches are for release management only, and doesn't affect most contributors from a
-commit perspective.
-
-For convenience you should install and use the https://github.com/nvie/gitflow[git-flow git extension] that implement
-this branching model by adding git commands.
-You may find the http://danielkummer.github.io/git-flow-cheatsheet/[git-flow cheatsheet] helpful too.
-It is available in several languages.
-
-[NOTE]
-.Gitlab Merge Requests
-====
-We also accept contributions as Gitlab Merge Requests.
-
-Merge requests let you tell others about changes you've pushed to a Gitlab repository.
+Pull requests let you tell others about changes you've pushed to a repository on GitHub.
 Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and
 even push follow-up commits if necessary.
 
-See the link:https://scm.codeartisans.org/help/workflow[Gitlab Help] about this.
-Choose the workflow you're confy with.
-====
+See the link:https://help.github.com/articles/using-pull-requests/[Using pull requests] guide on
+link:https://help.github.com/[Github Help].
 
+IMPORTANT: Development happens on the `develop` branch, remember to target it, not `master`, when sending pull requests.
 
 === Contribute documentation
 
@@ -122,3 +91,43 @@ see the link:/doc/current/guides.html#werval_documentation[Werval Documentation]
 
 See the link:/doc/current/guides.html#write_modules[Writing Werval Modules] guide.
 
+
+== Core Team workflow
+
+We generally uses a Commit-Then-Review policy on most changes.
+This allows a reasonable high velocity of development.
+
+=== Branching model
+
+Courtesy of Vincent Driessen, we borrowed the http://nvie.com/posts/a-successful-git-branching-model/[git-flow]
+branching model.
+
+image::images/git-flow-model.png[Git Flow,align="center"]
+
+It looks more complicated than it is. Here are the guidelines;
+
+- Never commit to the `master` branch while developing!!
+- The `develop` branch is the equivalent of trunk in subversion.
+- Any changes that are not trivial, start a feature branch.
+- The following names are reserved for not feature branches; `master`, `develop`, `hotfix/*`, `release/*`
+
+Day-to-day development revolves around the `develop` branch and it is this branch that you typically clone from our
+repository if you intend to contribute to Werval itself.
+If you create a new feature, or make some larger piece of refactoring, then please create a 'feature branch'
+(see article for details).
+
+The `release/*` and `hotfix/*` branches are for release management only, and doesn't affect most contributors from a
+commit perspective.
+
+[TIP]
+====
+For convenience you should install and use the https://github.com/nvie/gitflow[git-flow git extension] that implement
+this branching model by adding git commands.
+You may find the http://danielkummer.github.io/git-flow-cheatsheet/[git-flow cheatsheet] helpful too.
+It is available in several languages.
+====
+
+
+=== Merging pull-requests
+
+Github pull requests must be merged to the `develop` branch only.
