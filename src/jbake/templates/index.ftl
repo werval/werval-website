@@ -33,7 +33,7 @@
                 </p>
                 <p>
                     <br/>
-                    <a href="https://github.com/werval"><img src="images/github.png"/></a>
+                    <a href="https://github.com/werval" target="_blank"><img src="images/github.png"/></a>
                 </p>
                 <#--iframe width="420" height="315" src="//www.youtube.com/embed/r2vd_KKWBek" frameborder="0" allowfullscreen></iframe-->
                 <#--iframe width="420" height="315" src="//www.youtube.com/embed/rog8ou-ZepE" frameborder="0" allowfullscreen></iframe-->

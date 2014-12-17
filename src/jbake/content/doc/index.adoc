@@ -3,24 +3,14 @@
 :toc: right
 :toc-title: Versions
 
+Werval documentation is versionned.
 
 toc::[]
 
 == Werval {werval_current_version}
 
-- link:current/index.html[Documentation index]
+- link:current/index.html[Documentation for the latest released version]
 
-=== Getting started
+== Development version
 
-- link:current/getting-started.html[Getting Started using Werval]
-- link:current/guides.html[This and that guides]
-
-=== Reference material
-
-- link:current/manual.html[Werval Manual]
-- link:current/api/index.html[API Javadoc,window="_blank"]
-- link:current/modules/index.html[Official modules documentation]
-
-== Development
-
-See development version link:develop/index.html[documentation].
+link:develop/index.html[Documentation for the development version]
