@@ -19,7 +19,7 @@
             <div style="text-align:center">
                 <p>
                     <div class="btn-group">
-                      <a href="doc/index.html" class="btn btn-lg btn-primary"><i class="glyphicon glyphicon-book"></i> Learn more</a>
+                      <a href="doc/current/index.html" class="btn btn-lg btn-primary"><i class="glyphicon glyphicon-book"></i> Learn more</a>
                       <button type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown">
                         <i class="glyphicon glyphicon-plane"></i> Get started! <span class="caret"></span>
                       </button>
