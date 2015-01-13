@@ -16,7 +16,7 @@
                     <div class="sect2">
                         <h3 id="${version}">${version}</h3>
                         <div class="paragraph">
-                            <p><a href="${version/index.html}" class="btn btn-sm btn-warning">Documentation for ${version}</a></p>
+                            <p><a href="${version}/index.html" class="btn btn-sm btn-warning">Documentation for ${version}</a></p>
                         </div>
                     </div>
                 </#list>

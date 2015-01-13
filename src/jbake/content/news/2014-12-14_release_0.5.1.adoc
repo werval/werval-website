@@ -1,4 +1,4 @@
-= Werval 0.5.1 is out!
+= Werval 0.5.1
 Werval 0.5.1
 2014-12-14
 :jbake-type: post

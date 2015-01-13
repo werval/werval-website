@@ -5,3 +5,4 @@ buildSrc/.nb-gradle/profiles/private
 .nb-gradle/profiles/private
 .gradle
 .devshell.lock
+src/heroku/.nb-gradle
