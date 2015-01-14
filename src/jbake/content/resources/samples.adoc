@@ -37,10 +37,13 @@ gradle check
 gradle distZip
 ----
 
+See their respective READMEs for more.
+
 
 == URL Shortener
 
 _URL Shortener_ is a simple application using only Werval core.
+It operates in-memory and only use the link:../doc/current/modules/json/index.html[JSON module].
 
 See https://github.com/werval/werval-sample-urlshortener
 
@@ -54,6 +57,7 @@ git clone git@github.com:werval/werval-sample-urlshortener.git
 == Beer Database
 
 _Beer Database_ is a full-featured ReSTful endpoint enlightened by a single page application built using Angular.
+Persistence is implemented using the link:../doc/current/modules/jpa/index.html[JPA module].
 
 See https://github.com/werval/werval-sample-beerdb
 

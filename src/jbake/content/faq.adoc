@@ -7,8 +7,8 @@ This and that
 :toc: right
 :toc-title: Questions
 
-New FAQs should be submitted as a new https://github.com/werval/werval/issues/new[GitLab Issue],
-once accepted it will be added to this document.
+New FAQs should be submitted as a new https://github.com/werval/werval/issues/new?labels=faq[issue]
+with the `faq` tag, once accepted it will be added to this document.
 
 toc::[]
 

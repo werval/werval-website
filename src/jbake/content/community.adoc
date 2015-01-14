@@ -13,6 +13,8 @@ toc::[]
 
 To discuss with the Werval community, post questions and get answers, join us at http://freenode.net/[freenode], IRC channel `##werval`.
 
+If you have a question and need some answers, ask it on http://stackoverflow.com/questions/ask?tags=werval[stackoverflow] using the `werval` tag.
+
 If you found a bug, want to request a new feature or enhancement or would like to contribute to Werval, keep reading.
 
 
@@ -69,6 +71,9 @@ link:https://help.github.com/[Github Help].
 
 IMPORTANT: Development happens on the `develop` branch, remember to target it, not `master`, when sending pull requests.
 
+If your contribution is related to an existing issue, please follow this http://codeinthehole.com/writing/converting-github-issues-into-pull-requests/[Converting github issues into pull-requests] guide.
+
+
 === Contribute documentation
 
 If you want to contribute to the documentation effort, well that's really good news!
@@ -102,7 +107,7 @@ This allows a reasonable high velocity of development.
 Courtesy of Vincent Driessen, we borrowed the http://nvie.com/posts/a-successful-git-branching-model/[git-flow]
 branching model.
 
-image::images/git-flow-model.png[Git Flow,align="center"]
+image::images/git-flow-model.png[Git Flow,320,align="center",link="images/git-flow-model.png",window="_blank"]
 
 It looks more complicated than it is. Here are the guidelines;
 

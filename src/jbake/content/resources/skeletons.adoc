@@ -21,18 +21,14 @@ toc::[]
 == Choose a skeleton
 
 Officially supported skeletons aim to cover frequent use cases.
-They are for now limited to the following three types of applications: _HTTP Resources_, _WebApp_ and _Single Page Application_.
-All skeletons have a Gradle and a Maven flavour.
+They are for now limited to the following types of applications:
 
 [horizontal]
 _HTTP Resources:: Lightweight application using only Werval's core and the JSON module or course
-WebApp:: JSON resources and a server-side template engine
+// WebApp:: JSON resources and a server-side template engine
 Single Page Application:: JSON resources and a client-side javascript application built using http://gulpjs.com/[gulp] & http://browserify.org/[browserify].
 
 None of the skeletons include a persistence mechanism, you'll have to implement yours, see the available link:../doc/current/modules/index.html[modules].
-
-
-== Gradle Skeletons
 
 
 [IMPORTANT]
@@ -46,6 +42,8 @@ Github provide a subversion view of git repositories, we're leveraging that.
 A command line client for easy usage of application skeletons is under active discussion, planned and will be added in
 a future release, see https://github.com/werval/werval/issues/99[#99].
 ====
+
+== Gradle Skeletons
 
 
 === HTTP Resources
@@ -70,6 +68,14 @@ See https://github.com/werval/werval-skel-gradle-spa
 
 ----
 svn export https://github.com/werval/werval-skel-gradle-spa/trunk YOUR_APP_NAME
+----
+
+=== Werval Module
+
+See https://github.com/werval/werval-skel-module
+
+----
+svn export https://github.com/werval/werval-skel-module/trunk YOUR_APP_NAME
 ----
 
 

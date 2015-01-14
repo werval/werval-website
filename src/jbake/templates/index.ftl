@@ -31,13 +31,11 @@
                       </ul>
                     </div>
                 </p>
-                <p>
-                    <br/>
+                <p class="index-logos">
+                    <a href="https://travis-ci.org/werval/werval" target="_blank"><img src="images/travis.png"/></a>
                     <a href="https://github.com/werval" target="_blank"><img src="images/github.png"/></a>
+                    <a href="http://stackoverflow.com/questions/ask?tags=werval" target="_blank"><img src="images/stackoverflow.png"/></a>
                 </p>
-                <#--iframe width="420" height="315" src="//www.youtube.com/embed/r2vd_KKWBek" frameborder="0" allowfullscreen></iframe-->
-                <#--iframe width="420" height="315" src="//www.youtube.com/embed/rog8ou-ZepE" frameborder="0" allowfullscreen></iframe-->
-                <#--p><strong>We need some screencast!</strong></p-->
             </div>
 
 			<div id="toc" class="toc2">
