@@ -50,11 +50,11 @@ def versionsSwitcher( title, current, versions_array ) {
 }
 
 // Develop
-configurations { doc_develop_new { transitive = false } }
-dependencies { doc_develop_new "io.werval:io.werval.dist:0:doc@zip" }
-task extractDocDevelopNew(type: Copy) {
-    inputs.file configurations.doc_develop_new
-    from zipTree( configurations.doc_develop_new.fileCollection{ it.name == 'io.werval.dist' }.singleFile )
+configurations { doc_develop { transitive = false } }
+dependencies { doc_develop "io.werval:io.werval.dist:0:doc@zip" }
+task extractDocDevelop(type: Copy) {
+    inputs.file configurations.doc_develop
+    from zipTree( configurations.doc_develop.files{ it.name == 'io.werval.dist' }.iterator().next() )
     into file('build/tmp/werval-doc/develop')
     includeEmptyDirs = false
     doLast {
@@ -69,11 +69,11 @@ task extractDocDevelopNew(type: Copy) {
     }
 }
 // Current
-configurations { doc_current_new { transitive = false } }
-dependencies { doc_current_new "io.werval:io.werval.dist:$current:doc@zip" }
-task extractDocCurrentNew(type: Copy) {
-    inputs.file configurations.doc_current_new
-    from zipTree( configurations.doc_current_new.fileCollection{ it.name == 'io.werval.dist' }.singleFile )
+configurations { doc_current { transitive = false } }
+dependencies { doc_current "io.werval:io.werval.dist:$current:doc@zip" }
+task extractDocCurrent(type: Copy) {
+    inputs.file configurations.doc_current
+    from zipTree( configurations.doc_current.files{ it.name == 'io.werval.dist' }.iterator().next() )
     into file('build/tmp/werval-doc/current')
     includeEmptyDirs = false
     doLast {
@@ -88,15 +88,20 @@ task extractDocCurrentNew(type: Copy) {
     }
 }
 // Previous releases
-configurations { doc_versions_new { transitive = false } }
-dependencies { versions_array.each { v -> doc_versions_new "io.werval:io.werval.dist:$v:doc@zip" } }
-task extractDocVersionsNew {
-    dependsOn configurations.doc_versions_new
-    versions_array.each { v -> outputs.dir "build/tmp/werval-doc/$v" }
+versions_array.each { v ->
+    configurations.create("doc_previous_$v")
+    configurations["doc_previous_$v"].transitive = false
+    dependencies.add "doc_previous_$v", "io.werval:io.werval.dist:$v:doc@zip"
+}
+task extractDocPrevious {
+    versions_array.each { v ->
+        dependsOn configurations["doc_previous_$v"]
+        outputs.dir "build/tmp/werval-doc/$v"
+    }
     doLast {
         versions_array.each { v ->
             copy {
-                from zipTree( configurations.doc_versions_new.fileCollection{ it.name == 'io.werval.dist' && it.version == v }.singleFile )
+                from zipTree( configurations["doc_previous_$v"].getFiles().grep{ it.name == "io.werval.dist-$v-doc.zip" }.iterator().next() )
                 into file( "build/tmp/werval-doc/$v" )
                 includeEmptyDirs = false
             }
@@ -151,7 +156,7 @@ buildscript {
     }
 }
 task prepareJBakeInput {
-    dependsOn extractDocDevelopNew, extractDocCurrentNew, extractDocVersionsNew, generateVersionsIndexJSON, generateRobotsTxt
+    dependsOn extractDocDevelop, extractDocCurrent, extractDocPrevious, generateVersionsIndexJSON, generateRobotsTxt
     inputs.dir file( 'src/jbake' )
     inputs.dir file( 'build/tmp/robots-txt' )
     inputs.dir file( 'build/tmp/werval-doc' )

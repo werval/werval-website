@@ -1,0 +1,28 @@
+= Werval 0.7.2
+Werval 0.7.2
+2015-03-18
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: announcement
+:idprefix:
+
+
+Werval is an open source JVM based toolkit for building HTTP services.
+A lightweight core, live reload dev mode, useful modules, plugins for several build tools and
+multiple languages support leave you free to choose the right architecture for your domain.
+
+link:../doc/current/get-started-gradle.html[Get started using Gradle]
+
+link:../doc/current/get-started-maven.html[Get started using maven]
+
+Keep in sight that this is an early access release and that some edges may still be rough.
+
+If you encounter any issue, please report by creating a
+link:https://github.com/werval/werval/issues/new[new issue].
+
+== Changelog
+
+=== Bug fixes
+
+- (#249) Fix response code on request's single-value constraints violations
+- (#250) Fix Netty server bahaviour on invalid/unparseable HTTP requests

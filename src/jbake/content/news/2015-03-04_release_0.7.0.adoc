@@ -1,0 +1,46 @@
+= Werval 0.7.0
+Werval 0.7.0
+2015-03-04
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: announcement
+:idprefix:
+
+
+Werval is an open source JVM based toolkit for building HTTP services.
+A lightweight core, live reload dev mode, useful modules, plugins for several build tools and
+multiple languages support leave you free to choose the right architecture for your domain.
+
+link:../doc/current/get-started-gradle.html[Get started using Gradle]
+
+link:../doc/current/get-started-maven.html[Get started using maven]
+
+Keep in sight that this is an early access release and that some edges may still be rough.
+
+If you encounter any issue, please report by creating a
+link:https://github.com/werval/werval/issues/new[new issue].
+
+== Changelog
+
+https://github.com/werval/werval/commits/0.7.0[Commit history]
+
+=== Breaking changes
+
+- (#246) APIs now leverage Java 8 `java.util.Optional`
+
+=== Bug fixes
+
+- (#239) Fix ReverseRoutes NPE if controller is interface and no parameters
+- (#242) Fix `@AcceptContentType` filter failure on `Content-Type` headers with charset info
+
+=== New features
+
+- (#5) CORS support
+- (#241) JSON Web Token support
+
+=== Enhancements
+
+- (#240) Allow filter annotations on filter annotations
+- (#243) Allow global filter annotations on Global object
+- (#244) DevShell now open `http://localhost:port/` instead of `http://0.0.0.0:port/` when `werval.http.address` is `0.0.0.0`
+
