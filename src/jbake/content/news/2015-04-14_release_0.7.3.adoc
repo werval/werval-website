@@ -1,0 +1,44 @@
+= Werval 0.7.3
+Werval 0.7.3
+2015-04-14
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: announcement
+:idprefix:
+
+
+Werval is an open source JVM based toolkit for building HTTP services.
+A lightweight core, live reload dev mode, useful modules, plugins for several build tools and
+multiple languages support leave you free to choose the right architecture for your domain.
+
+link:../doc/current/get-started-gradle.html[Get started using Gradle]
+
+link:../doc/current/get-started-maven.html[Get started using maven]
+
+Keep in sight that this is an early access release and that some edges may still be rough.
+
+If you encounter any issue, please report by creating a
+link:https://github.com/werval/werval/issues/new[new issue].
+
+== Changelog
+
+=== Bug fixes
+
+- (#251) JOSE: Allow issuance of JWT without subject
+
+=== Enhancements
+
+- (#252) Add server health-check to the SMTP module
+
+=== Dependency changes
+
+- Core
+    - Upgrade SLF4J from `1.7.10` to `1.7.12`, see the http://slf4j.org/news.html[announcements]
+    - Upgrade Javassist from `3.18` to `3.19`, see the https://github.com/jboss-javassist/javassist/commits/3.19[history] 
+    - Upgrade Netty from `4.0.25` to `4.0.27`, see the announcements:
+      http://netty.io/news/2015/03/04/three-releases.html[4.0.26] and http://netty.io/news/2015/04/02/4-0-27-Final.html[4.0.27]
+- Modules
+    - Upgrade PostgreSQL JDBC driver from `9.3` to `9.4`, see the https://github.com/pgjdbc/pgjdbc/commits/REL9_4_STABLE[history]
+    - Upgrade EclipseLink from `2.5` to `2.6`, see the http://www.eclipse.org/eclipselink/releases/index.php[release-notes]
+    - Upgrade EhCache from `2.9` to `2.10`, see the http://www.ehcache.org/changes-report[changes-report]
+    - Upgrade Jedis from `2.6` to `2.7`, see the https://github.com/xetorthio/jedis/releases[release-notes]

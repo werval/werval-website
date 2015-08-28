@@ -113,7 +113,7 @@ See the link:current/getting-started.html[Getting Started] page.
 == What are the main sources of inspiration of Werval?
 
 - https://www.playframework.com/[Play Framework]
-- http://qi4j.org/[Qi4j]
+- https://zest.apache.org/[Apache Zest™]
 - A lot of other http/web frameworks (Rails, Django, Grails etc...)
 
 
