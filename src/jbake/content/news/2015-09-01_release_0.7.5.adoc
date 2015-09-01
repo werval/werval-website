@@ -1,0 +1,36 @@
+= Werval 0.7.5
+Werval 0.7.5
+2015-09-01
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: announcement
+:idprefix:
+
+
+Werval is an open source JVM based toolkit for building HTTP services.
+A lightweight core, live reload dev mode, useful modules, plugins for several build tools and
+multiple languages support leave you free to choose the right architecture for your domain.
+
+link:../doc/current/get-started-gradle.html[Get started using Gradle]
+
+link:../doc/current/get-started-maven.html[Get started using maven]
+
+Keep in sight that this is an early access release and that some edges may still be rough.
+
+If you encounter any issue, please report by creating a
+link:https://github.com/werval/werval/issues/new[new issue].
+
+== Changelog
+
+=== Dependency changes
+
+- Core
+
+    - Upgrade Javassist from `3.19` to `3.20`, see the https://github.com/jboss-javassist/javassist/commits/3.20[history]
+
+- Modules
+
+    - Upgrade HikariCP from `2.3` to `2.4`, see the https://github.com/brettwooldridge/HikariCP/commits/master[history]
+    - Upgrade Jackson from `2.5` to `2.6`, see the https://github.com/FasterXML/jackson/wiki/Jackson-Release-2.6[release-notes]
+    - Upgrade spymemcached from `2.11` to `2.12`, see the https://github.com/couchbase/spymemcached[history]
+    - Upgrade Spring from `4.1` to `4.2`, see the http://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/htmlsingle/#new-in-4.2[changes-report]
